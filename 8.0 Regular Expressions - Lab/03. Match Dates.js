@@ -1,0 +1,12 @@
+function myFun(input) {
+  let result = input[0].match(/\d{2}([\./-])[A-Z]\w{2}\1\d{4}/gm)
+
+  for (const el of result) {
+    let day = el.slice(0, 2)
+    let month = el.slice(3, 6)
+    let year = el.slice(-4)
+    console.log(`Day: ${day}, Month: ${month}, Year: ${year}`);
+  }
+}
+
+//myFun(["13/Jul/1928, 10-Nov-1934, , 01/Jan-1951,f 25.Dec.1937 23/09/1973, 1/Feb/2016"])
