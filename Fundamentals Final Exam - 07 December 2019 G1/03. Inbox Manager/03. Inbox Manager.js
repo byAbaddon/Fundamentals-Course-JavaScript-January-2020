@@ -39,16 +39,16 @@ function inboxManager(inputArr) {
   }
 }
 
-inboxManager([
-  'Add->Mike',
-  'Add->George',
-  'Send->George->Hello World',
-  'Send->George->Some random test mail',
-  'Send->Mike->Hello, do you want to meet up tomorrow?',
-  'Send->George->It would be a pleasure',
-  'Send->Mike->Another random test mail',
-  'Statistics',
-])
+//inboxManager([
+//  'Add->Mike',
+//  'Add->George',
+//  'Send->George->Hello World',
+//  'Send->George->Some random test mail',
+//  'Send->Mike->Hello, do you want to meet up tomorrow?',
+//  'Send->George->It would be a pleasure',
+//  'Send->Mike->Another random test mail',
+//  'Statistics',
+//])
 
 // inboxManager([
 // "Add->Mike", 
