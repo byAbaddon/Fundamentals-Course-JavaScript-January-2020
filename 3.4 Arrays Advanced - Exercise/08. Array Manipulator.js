@@ -1,3 +1,46 @@
+function arrayManipulator(firstArr, secondArr) {
+  let arr = firstArr
+
+  secondArr.forEach(el => {
+    const command = el.split(' ').shift()
+    let number = el.split(' ').filter(n => !isNaN(n)).map(Number)
+
+    if (command == 'print') console.log(`[ ${arr.join(', ')} ]`)
+    if (command == 'contains') console.log(arr.indexOf(number[0]))
+    if (command == 'remove') arr.splice(number, 1)
+
+    if (command == 'add' || command == 'addMany') {
+      const index = number.shift()
+      arr.splice(index, 0, ...number)
+    }
+
+    if (command == 'shift') {
+      while (number--) {
+        let movedEl = +arr.shift()
+        arr.push(movedEl)
+      }
+    }
+
+    if (command == 'sumPairs') {
+      let arrOfSumPairs = []
+      while (arr.length != 0) {
+        let first = arr.shift() || 0
+        let second = arr.shift() || 0
+        arrOfSumPairs.push(first + second)
+      }
+
+      arr = arrOfSumPairs
+    }
+  })
+}
+
+
+//arrayManipulator([1, 2, 4, 5, 6, 7], ['add 1 8', 'contains 1', 'contains 3', 'print'])
+//arrayManipulator([1, 2, 3, 4, 5], ['addMany 5 9 8 7 6 5', 'contains 15', 'remove 3', 'shift 1', 'print'])
+//arrayManipulator([2, 2, 4, 2, 4],["add 1 4", "sumPairs", "print"])
+//arrayManipulator([1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2], ["sumPairs", "sumPairs", "addMany 0 -1 -2 -3", "print"])
+------------------------------------------------------------(2)-----------------------------------------------------------
+
 function arrayManipulator(arrNum, commandsAndNum) { 
   let arrList = [...arrNum]
   let command = ''
