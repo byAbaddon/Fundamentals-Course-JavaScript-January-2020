@@ -16,7 +16,7 @@ function arrayManipulator(firstArr, secondArr) {
 
     if (command == 'shift') {
       while (number--) {
-        let movedEl = +arr.shift()
+        let movedEl = arr.shift()
         arr.push(movedEl)
       }
     }
