@@ -10,8 +10,8 @@ function addOrSubtract(inputArray) {
 
   let sumOriginalArr = inputArray.reduce((a, b) => a + b)
   let sumModifiedArr = arr.reduce((a, b) => a + b)
-  console.log(arr);
-  console.log(`${sumOriginalArr}\n${sumModifiedArr}`);
+  
+  return `[ ${arr.join(', ')} ]\n${sumOriginalArr}\n${sumModifiedArr}`
 }
 
-addOrSubtract([-5, 11, 3, 0, 2])
+// console.log(addOrSubtract([-5, 11, 3, 0, 2]))

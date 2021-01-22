@@ -10,7 +10,8 @@ function mergeArrays(array1, array2) {
       arr3.push(arr1[i] + arr2[i])
     }
   }
-  console.log(arr3.join(' - '));
+
+  return arr3.join(' - ')
 }
 
-//mergeArrays(['5', '15', '23', '56', '35'], ['17', '22', '87', '36', '11'])
+// console.log(mergeArrays(['5', '15', '23', '56', '35'], ['17', '22', '87', '36', '11']))

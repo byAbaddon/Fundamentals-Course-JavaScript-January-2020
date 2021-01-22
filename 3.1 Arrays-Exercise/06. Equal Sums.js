@@ -1,28 +1,26 @@
 function equalSums(input) {
-  let sumLeft = 0;
-  let sumRight = 0;
-  let isEqual = false;
-  let equalIndex = 0;
+  let sumLeft = sumRight = equalIndex = 0
+  let isEqual = false
+
   for (let i = 0; i < input.length; i++) {
     for (let j = 0; j < i; j++) {
-      sumLeft += input[j];
+      sumLeft += input[j]
     }
+
     for (let k = i + 1; k < input.length; k++) {
-      sumRight += input[k];
+      sumRight += input[k]
     }
+    
     if (sumLeft === sumRight) {
-      isEqual = true;
-      equalIndex = i;
-      break;
+      isEqual = true
+      equalIndex = i
+      break
     }
-    sumLeft = 0;
-    sumRight = 0;
+    sumLeft = sumRight = 0
   }
-  if (isEqual) {
-    console.log(equalIndex);
-  } else {
-    console.log(`no`)
-  }
+
+  if (isEqual) return equalIndex
+  return 'no'
 }
 
-//equalSums([1, 2, 3, 3]) 
+// console.log(equalSums([1, 2, 3, 3])) 
