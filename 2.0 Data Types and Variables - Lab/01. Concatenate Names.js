@@ -1,5 +1,5 @@
 function concatenateNames(name, lastName, symbol) {
-  console.log(name  + symbol + lastName);
+  return `${name}${symbol}${lastName}`
 }
 
-concatenateNames('John', 'Smith', '->')
+// console.log(concatenateNames('John', 'Smith', '->'))

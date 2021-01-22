@@ -1,9 +1,8 @@
-function amazingNumbers(arg) {
-  let number = arg
+function amazingNumbers(number) {
   let result = number.toString().split('').reduce((a, b) => +a + +b)
   result = result.toString().includes('9') ? 'True' : 'False'
-  console.log(`${number} Amazing? ${result}`);
+  return `${number} Amazing? ${result}`
 }
 
-//amazingNumbers(1233)
-//amazingNumbers(999)
+// console.log(amazingNumbers(1233))
+// console.log(amazingNumbers(999))

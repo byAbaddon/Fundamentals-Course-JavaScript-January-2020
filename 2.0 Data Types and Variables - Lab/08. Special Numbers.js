@@ -13,4 +13,4 @@ function specialNumbers(input) {
   }
 }
 
-//specialNumbers(30)
+// specialNumbers(30)

@@ -1,7 +1,7 @@
 function rightPlace(str1, char, str2) {
   let newStr1 = str1.replace('_', char)
-  console.log(newStr1 === str2 ? "Matched" : "Not Matched");
+  return newStr1 === str2 ? "Matched" : "Not Matched"
 }
 
-// rightPlace('Str_ng', 'I', 'Strong')
-// rightPlace('Str_ng', 'i', 'String')
+// console.log(rightPlace('Str_ng', 'I', 'Strong'))
+// console.log(rightPlace('Str_ng', 'i', 'String'))
