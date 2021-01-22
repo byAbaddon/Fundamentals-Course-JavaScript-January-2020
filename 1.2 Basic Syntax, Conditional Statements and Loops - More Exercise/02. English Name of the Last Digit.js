@@ -1,6 +1,7 @@
 function englishNameOfTheLastDigit(input) {
-   let num = input.toString().slice(-1) 
-   let result = ''
+  let num = input.toString().slice(-1) 
+  let result = ''
+  
   switch (Number(num)) {
     case 0: result = 'zero' ; break;
     case 1: result = 'one' ; break;
@@ -13,6 +14,8 @@ function englishNameOfTheLastDigit(input) {
     case 8: result = 'eight' ; break;
     case 9: result = 'nine' ; break;
   }
-  console.log(result);
+
+  return result
 }
-//englishNameOfTheLastDigit(512)
+
+// console.log(englishNameOfTheLastDigit(512))

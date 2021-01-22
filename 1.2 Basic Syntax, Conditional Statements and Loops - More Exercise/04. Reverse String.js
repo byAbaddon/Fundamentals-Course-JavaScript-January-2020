@@ -1,4 +1,5 @@
 function reverseString(arg) {
-  console.log([...arg].reverse().join(''));
+  return [...arg].reverse().join('')
 }
-//reverseString('Hello')
+
+// console.log(reverseString('Hello'))
