@@ -1,5 +1,5 @@
 function binaryToDecimal(binaryNum) {
-  console.log(parseInt(binaryNum, 2));
+  return parseInt(binaryNum, 2)
 }
 
-//binaryToDecimal(11110000) 
+// console.log(binaryToDecimal(11110000) )

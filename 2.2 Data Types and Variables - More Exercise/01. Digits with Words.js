@@ -12,7 +12,8 @@ function digitsWithWords(arg) {
     case 'eight':result = 8 ;break;
     case 'nine': result = 9 ;break; 
   }
-console.log(result);
+
+  return result
 }
 
-//digitsWithWords('two')
+// console.log(digitsWithWords('two'))
