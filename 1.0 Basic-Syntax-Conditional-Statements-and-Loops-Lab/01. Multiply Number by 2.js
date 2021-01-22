@@ -3,4 +3,4 @@ function multiplyNumberBy2(number) {
 }
 
 //console.log(multiplyNumberBy2(2))
-// test row
+/// test row
