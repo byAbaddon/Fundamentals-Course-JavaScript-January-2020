@@ -10,4 +10,5 @@ function triangleOfNumbers(num) {
   }
 
 }
+
 //triangleOfNumbers(6)

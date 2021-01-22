@@ -1,12 +1,7 @@
 function leapYear(arg) {
-
-  if (arg % 4 === 0 && arg % 100 !== 0 || arg % 400 === 0) {
-    console.log('yes');
-  } else {
-    console.log('no');
-  }
+  return arg % 4 === 0 && arg % 100 !== 0 || arg % 400 === 0 ? 'yes' : 'no'
 }
 
-// leapYear(1984)
-// leapYear(2003)
-// leapYear(4)
+// console.log(leapYear(1984))
+// console.log(leapYear(2003))
+// console.log(leapYear(4))

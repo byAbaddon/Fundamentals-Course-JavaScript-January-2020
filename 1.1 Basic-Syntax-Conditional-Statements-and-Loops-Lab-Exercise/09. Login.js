@@ -1,6 +1,7 @@
 function login(arg) {
   let userName = arg.shift()
   let reversedArr = arg.map(el => el.split('').reverse().join(''))
+
   for (let i = 0; i < reversedArr.length; i++) {
     if (i >= 3) {
       console.log(`User ${userName} blocked!`);
@@ -13,5 +14,6 @@ function login(arg) {
     }
   }
 }
-//login(['Acer','login','go','let me in','recA'])
-//login(['sunny','rainy','cloudy','sunny','not sunny'])
+
+// login(['Acer','login','go','let me in','recA'])
+// login(['sunny','rainy','cloudy','sunny','not sunny'])
