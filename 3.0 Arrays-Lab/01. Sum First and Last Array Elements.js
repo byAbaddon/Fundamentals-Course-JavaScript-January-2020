@@ -1,9 +1,9 @@
 function sumFirstAndLastArrayElements(inputArray) {
-  let arr = [...inputArray]  //good practice, don't touch original array
+  let arr = [...inputArray]              //good practice, don't touch original array
   let firstEl = arr.shift()
-  let lastEl = +arr.pop()    //bad cast  + , use Number()  
-
-  console.log(Number(firstEl) + lastEl);  //good cast Number(), but long
+  let lastEl = +arr.pop()                //bad cast  [+] , use Number()  
+  let result = Number(firstEl) + lastEl  //good cast Number(), but long
+  return result                          // function must use return not console.log()!
 }
 
-//sumFirstAndLastArrayElements(['10', '17', '22', '33'])
+// console.log(sumFirstAndLastArrayElements(['10', '17', '22', '33']))
