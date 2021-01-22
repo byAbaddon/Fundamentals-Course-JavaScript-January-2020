@@ -7,7 +7,8 @@ function foreignLanguages(arg) {
   } else {
     result = 'unknown'
   }
-  console.log(result)
+  return result
 }
-//foreignLanguages('Germany')
-//foreignLanguages('USA')
+
+// console.log(foreignLanguages('Germany'))
+// console.log(foreignLanguages('USA')   )
