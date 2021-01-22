@@ -1,6 +1,6 @@
 function ages(age) {
 
-  if (age >= 0  && age <= 2) {
+  if (age >= 0 && age <= 2) {
     result = 'baby'
   } else if (age >= 3 && age <= 13) {
     result = 'child'
@@ -8,14 +8,15 @@ function ages(age) {
     result = 'teenager'
   } else if (age >= 20 && age <= 65) {
     result = 'adult'
-  } else if (age >= 66){
+  } else if (age >= 66) {
     result = 'elder'
-  }else{
+  } else {
     result = 'out of bounds'
-  } 
-  console.log(result);
+  }
+
+  return result
 }
 
-// ages(20) 
-// ages(1) 
-// ages(100) 
+// console.log(ages(20))
+// console.log(ages(1))
+// console.log(ages(100))
