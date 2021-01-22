@@ -13,11 +13,11 @@ function gladiatorExpenses(lostFight, helmetPrice, swordPrice, shieldPrice, amor
                  (trashedShield * shieldPrice) +
                  (trashedAmor * amorPrice)
 
-  console.log(`Gladiator expenses: ${expenses.toFixed(2)} aureus`);
+  return `Gladiator expenses: ${expenses.toFixed(2)} aureus`
 }
 
-// gladiatorExpenses(7, 2, 3, 4, 5)
-// gladiatorExpenses(23, 12.50, 21.50, 40, 200)
+// console.log(gladiatorExpenses(7, 2, 3, 4, 5))
+// console.log(gladiatorExpenses(23, 12.50, 21.50, 40, 200))
 
 
 

@@ -1,6 +1,5 @@
 function charsToString(oneChar, twoChar, threeChar) {
-  let unionChars = oneChar + twoChar + threeChar
-  console.log(unionChars);
+  return oneChar + twoChar + threeChar
 }
 
-//charsToString('a', 'b', 'c')
+// console.log(charsToString('a', 'b', 'c'))

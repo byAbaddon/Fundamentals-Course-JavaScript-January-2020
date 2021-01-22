@@ -1,6 +1,5 @@
 function sumDigits(num) {
-  let sumNumbers = num.toString().split('').reduce((a, b) => +a + +b)
-  console.log(sumNumbers);
+  return num.toString().split('').reduce((a, b) => +a + +b)
 }
 
-//sumDigits(245678)
+// console.log(sumDigits(245678))

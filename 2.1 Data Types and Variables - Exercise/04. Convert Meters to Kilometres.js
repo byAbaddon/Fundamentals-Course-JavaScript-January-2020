@@ -1,5 +1,5 @@
 function convertMetersToKilometers(meters) {
-  console.log((meters / 1000).toFixed(2));
+  return (meters / 1000).toFixed(2)
 }
 
-//convertMetersToKilometers(798)
+// console.log(convertMetersToKilometers(798))
