@@ -1,5 +1,5 @@
 function gladiatorExpenses(lostFight, helmetPrice, swordPrice, shieldPrice, amorPrice) {
-  let [trashedHelmet, trashedSword, trashedShield, trashedAmor] = [0, 0, 0, 0]
+  let trashedHelmet = trashedSword = trashedShield = trashedAmor = 0
 
   for (let i = 1; i <= lostFight; i++) {
     i % 2 === 0 ? trashedHelmet++ : null
