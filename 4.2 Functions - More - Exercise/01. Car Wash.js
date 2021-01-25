@@ -13,4 +13,5 @@ function carWash(arr) {
   return `The car is ${value.toFixed(2)}% clean.`
 }
 
+
 // console.log(carWash(['soap', 'soap', 'vacuum cleaner', 'mud', 'soap', 'water']))
