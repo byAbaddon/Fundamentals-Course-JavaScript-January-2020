@@ -1,4 +1,4 @@
-function systemsRegister(input) {                     //copy paste
+function systemsRegister(input) {                   //copy paste
   let systems = {}
 
   for (let i = 0; i < input.length; i++) {
