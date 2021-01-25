@@ -51,6 +51,6 @@ function bombNumbers(arr1, arr2) {
 //   console.log(targetArr.reduce((a, b) => a + b));
 // }
 
-// bombNumbers([1, 2, 2, 4, 2, 2, 2, 9], [4, 2]) //12
+//bombNumbers([1, 2, 2, 4, 2, 2, 2, 9], [4, 2]) //12
 // bombNumbers([1, 4, 4, 2, 8, 9, 1], [9, 3]) //5
-// bombNumbers([1, 1, 2, 1, 1, 1, 2, 1, 1, 1], [2, 1]) //4
+// bombNumbers([1, 1, 2, 1, 1, 1, 2, 1, 1, 1], [2, 1])   //4

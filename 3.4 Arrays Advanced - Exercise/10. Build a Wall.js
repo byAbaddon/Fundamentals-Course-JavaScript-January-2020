@@ -27,6 +27,6 @@ function buildWall(wall) {
 }
 
 
-// console.log(buildWall([21, 25, 28]))
-// console.log(buildWall([17]))
-// console.log(buildWall([17, 22, 17, 19, 17]))
+//console.log(buildWall([21, 25, 28]))
+//console.log(buildWall([17]))
+//console.log(buildWall([17, 22, 17, 19, 17]))

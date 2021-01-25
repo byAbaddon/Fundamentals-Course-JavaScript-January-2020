@@ -3,4 +3,4 @@ function orders(product, price) {
   return (items[product] * price).toFixed(2)
 }
 
-  // console.log(orders('water', 5))
+  //console.log(orders('water', 5))

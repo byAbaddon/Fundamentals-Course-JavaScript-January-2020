@@ -11,4 +11,4 @@ function searchForNumber(arg1, arg2) {
   return `Number ${numberToSearchElement} occurs ${count} times.`
 }
 
-// console.log(searchForNumber([5, 2, 3, 4, 1, 6], [5, 2, 3]))
+//console.log(searchForNumber([5, 2, 3, 4, 1, 6], [5, 2, 3]))

@@ -15,5 +15,5 @@ function grades(grade) {
   return `${result} (${grade.toFixed(2)})`
 }
 
-// console.log(grades(2.99))
+//console.log(grades(2.99))
 

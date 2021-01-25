@@ -3,4 +3,4 @@ function simpleCalculator(n1, n2, operator) {
   return eval(n1 + math[operator] + n2)
 }
 
-// console.log(simpleCalculator(40, 8, "divide"))
+//console.log(simpleCalculator(40, 8, "divide"))
