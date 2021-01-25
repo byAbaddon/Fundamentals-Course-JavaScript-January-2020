@@ -32,11 +32,11 @@ function flightSchedule(inputArr) {
      obj2 = Object.values(obj2).sort((a, b) => a.localeCompare(b))
 
     for (const key of obj2) {
-      console.log(`{ Destination: '${key}', Status: '${status}' }`);
+      console.log(`{ Destination: '${key}', Status: '${status}' }`)
     }
   } else {
     for (const key in obj) {
-      console.log(`{ Destination: '${obj[key]}', Status: '${status}' }`);
+      console.log(`{ Destination: '${obj[key]}', Status: '${status}' }`)
     }
   }
 
