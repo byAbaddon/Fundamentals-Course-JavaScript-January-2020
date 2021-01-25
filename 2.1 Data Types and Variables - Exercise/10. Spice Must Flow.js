@@ -13,4 +13,4 @@ function spiceMustFlow(arg) {
   return `${operatedDays}\n${totalAmount}`
 }
 
-// console.log(spiceMustFlow(111))
+//console.log(spiceMustFlow(111))

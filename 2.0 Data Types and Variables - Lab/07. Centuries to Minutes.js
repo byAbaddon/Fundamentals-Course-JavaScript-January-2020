@@ -8,5 +8,5 @@ function centuriesToMinutes(input) {
   return `${centuriesNumber} centuries = ${years} years = ${days} days = ${hours} hours = ${minutes} minutes`
 }
 
-// console.log(centuriesToMinutes(1))
-// console.log(centuriesToMinutes(5))
+//console.log(centuriesToMinutes(1))
+//console.log(centuriesToMinutes(5))

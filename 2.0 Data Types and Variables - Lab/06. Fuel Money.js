@@ -6,5 +6,5 @@ function fuelMoney(distance, passengers, priceOneLtDiesel) {
   return `Needed money for that trip is ${neededMoney}lv.`
 }
 
-// console.log(fuelMoney(260, 9, 2.49))
-// console.log(fuelMoney(90, 14, 2.88))
+//console.log(fuelMoney(260, 9, 2.49))
+//console.log(fuelMoney(90, 14, 2.88))

@@ -4,4 +4,4 @@ function gramophone(albumName, bandName, songName) {
   return `The plate was rotated ${rotations} times.`
 }
 
-// console.log(gramophone('Black Sabbath', 'Paranoid', 'War Pigs'))
+//console.log(gramophone('Black Sabbath', 'Paranoid', 'War Pigs'))

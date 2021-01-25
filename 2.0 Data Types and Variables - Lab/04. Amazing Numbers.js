@@ -4,5 +4,5 @@ function amazingNumbers(number) {
   return `${number} Amazing? ${result}`
 }
 
-// console.log(amazingNumbers(1233))
-// console.log(amazingNumbers(999))
+//console.log(amazingNumbers(1233))
+//console.log(amazingNumbers(999))
