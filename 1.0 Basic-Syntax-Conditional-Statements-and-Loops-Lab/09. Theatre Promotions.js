@@ -8,18 +8,18 @@ function theatrePromotions(day, age) {
   }
 
   if (age < 0 || age > 122) {
-    console.log('Error!');
-    return
+    return 'Error!'
+
   } else if (0 <= age && age <= 18) {
     index = 0
   } else if (18 < age && age <= 64) {
     index = 1
-  } else if (64 < age && age  <= 122) {
+  } else if (64 < age && age <= 122) {
     index = 2
   }
 
-  console.log(table[day][index]);
+  return table[day][index]
 }
 
-//theatrePromotions('Weekday', 42)
-//theatrePromotions('Holiday', -12)
+// console.log(theatrePromotions('Weekday', 42))
+// console.log(theatrePromotions('Holiday', -12))
