@@ -18,12 +18,12 @@ function bombNumbers(arr1, arr2) {
     targetIndex = targetArr.indexOf(bombTarget)
   }
 
-  console.log(targetArr.reduce((a, b) => a + b, 0));
+  return targetArr.reduce((a, b) => a + b, 0)
 }
 
-// bombNumbers([1, 2, 2, 4, 2, 2, 2, 9], [4, 2]) //12
-// bombNumbers([1, 4, 4, 2, 8, 9, 1], [9, 3]) //5
-//bombNumbers([1, 1, 2, 1, 1, 1, 2, 1, 1, 1], [2, 1]) //4
+// console.log(bombNumbers([1, 2, 2, 4, 2, 2, 2, 9], [4, 2]) )//12
+// console.log(bombNumbers([1, 4, 4, 2, 8, 9, 1], [9, 3])) //5
+// console.log(bombNumbers([1, 1, 2, 1, 1, 1, 2, 1, 1, 1], [2, 1])) //4
 
 
 

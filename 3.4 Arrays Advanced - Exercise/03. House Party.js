@@ -1,9 +1,7 @@
-function houseParty(inputArr) {
-  let arr = [...inputArr]
+function houseParty(arr) {
   let partyList = []
-  let name = ''
-  let isGoing = ''
-
+  let name = isGoing = ''
+  
   for (let i = 0; i < arr.length; i++) {
     name = arr[i].split(' ')[0]
     isGoing = arr[i].split(' ').slice(1, )

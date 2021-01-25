@@ -1,5 +1,4 @@
-function gladiatorInventory(inputArr) {
-  let arr = [...inputArr]
+function gladiatorInventory(arr) {
 
   let inventory = Array.from(arr.shift().split(' '))
 
@@ -36,8 +35,8 @@ function gladiatorInventory(inputArr) {
     }
   }
 
-  console.log(inventory.join(' '));
+  return inventory.join(' ')
 }
 
-// gladiatorInventory(['SWORD Shield Spear', 'Buy Bag', 'Trash Shield', 'Repair Spear', 'Upgrade SWORD-Steel'])
-// gladiatorInventory(['SWORD Shield Spear', 'Trash Bow', 'Repair Shield', 'Upgrade Helmet-V'])
+// console.log(gladiatorInventory(['SWORD Shield Spear', 'Buy Bag', 'Trash Shield', 'Repair Spear', 'Upgrade SWORD-Steel']))
+// console.log(gladiatorInventory(['SWORD Shield Spear', 'Trash Bow', 'Repair Shield', 'Upgrade Helmet-V']))
