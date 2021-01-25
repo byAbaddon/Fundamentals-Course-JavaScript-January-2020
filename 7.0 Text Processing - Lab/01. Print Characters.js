@@ -1,9 +1,8 @@
-function printCharacters(inputArr) {
-  let arr = [...inputArr]
+function printCharacters(arr) {
 
   for (let i = 0; i < arr.length; i++) {
     console.log(arr[i]);
   }
 }
 
-//printCharacters('AWord')
+// printCharacters('AWord')
