@@ -5,20 +5,20 @@ function passwordGenerator(inputArr) {
 
   for (let i = 0; i < text.length; i++) {
     if (/[aeiou]/.test(text[i])) {
-      let extractedChar = chars.shift() //getChar
-      chars.push(extractedChar) //loopAndBackExtractedChar 
+      let extractedChar = chars.shift()
+      chars.push(extractedChar)
 
-      let getIndex = text.indexOf(text[i]) //getIndex
-      text[getIndex] = '' //removeCharIndexFromText
+      let getIndex = text.indexOf(text[i])
+      text[getIndex] = ''
 
-      arrCollection.push(extractedChar) //addFromNewCollection
+      arrCollection.push(extractedChar)
     }
 
     arrCollection.push(text[i])
   }
 
   let password = arrCollection.reverse().join('')
-  console.log(`Your generated password is ${password}`);
+  return `Your generated password is ${password}`
 }
 
-//passwordGenerator(['areyousureaboutthisone', 'notquitebutitrustyou', 'disturbed'])
+// console.log(passwordGenerator(['areyousureaboutthisone', 'notquitebutitrustyou', 'disturbed']))

@@ -4,8 +4,8 @@ function extractFile(str) {
   let name = str.slice(bksIndex + 1, extIndex)
   let ext = str.slice(extIndex + 1, )
 
-  console.log(`File name: ${name}\nFile extension: ${ext}`);
+  return `File name: ${name}\nFile extension: ${ext}`
 }
 
-// extractFile('C:\\Internal\\training-internal\\Template.bak.pptx')
-// extractFile('C:\\Projects\\Data-Structures\\LinkedList.cs')
+// console.log(extractFile('C:\\Internal\\training-internal\\Template.bak.pptx'))
+// console.log(extractFile('C:\\Projects\\Data-Structures\\LinkedList.cs'))

@@ -12,7 +12,7 @@ function revealWords(...input) {
     collection += text[i] + ' '
   }
 
-  console.log(collection);
+  return collection
 }
 
-//revealWords('great, learning', 'softuni is ***** place for ******** new programming languages')
+//console.log(revealWords('great, learning', 'softuni is ***** place for ******** new programming languages'))

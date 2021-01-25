@@ -1,7 +1,7 @@
 function modernTimes(input) {
   for (const el of input.split(' ')) {
     if (el.match(/(#[A-z]+)/gim)) {
-      console.log(el.substring(1, ));
+      console.log(el.substring(1, ))
     }
   }
 }

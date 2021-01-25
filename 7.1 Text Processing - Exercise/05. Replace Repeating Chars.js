@@ -8,8 +8,8 @@ function replaceRepeatingChars(str) {
     }
   }
 
-  console.log(word);
+  return word
 }
 
-// replaceRepeatingChars('aaaaabbbbbcdddeeeedssaa')
-// replaceRepeatingChars('qqqwerqwecccwd')
+// console.log(replaceRepeatingChars('aaaaabbbbbcdddeeeedssaa'))
+// console.log(replaceRepeatingChars('qqqwerqwecccwd'))

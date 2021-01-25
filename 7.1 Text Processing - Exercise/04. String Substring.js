@@ -1,14 +1,12 @@
 function stringSubstring(word, text) {
-  let wordsText = text.toLowerCase().split(" ");
+  let wordsText = text.toLowerCase().split(' ')
   for (let el of wordsText) {
-    if (el === word.toLowerCase()) {
-      console.log(el);
-      return
-    }
+    if (el === word.toLowerCase()) 
+      return el
   }
 
-  console.log(`${word} not found!`)
+  return `${word} not found!`
 }
 
-// stringSubstring('javascript', 'JavaScript is the best programming language')
-// stringSubstring('python', 'JavaScript is the best programming language')
+// console.log(stringSubstring('javascript', 'JavaScript is the best programming language'))
+// console.log(stringSubstring('python', 'JavaScript is the best programming language'))
