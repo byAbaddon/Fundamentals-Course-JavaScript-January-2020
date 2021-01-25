@@ -4,4 +4,4 @@ function firstAndLastKNumbers(arr) {
   console.log(arr.slice(-k).join(' '))
 }
 
-// firstAndLastKNumbers([3, 6, 7, 8, 9])
+//firstAndLastKNumbers([3, 6, 7, 8, 9])

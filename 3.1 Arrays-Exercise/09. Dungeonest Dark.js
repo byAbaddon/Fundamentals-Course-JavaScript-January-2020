@@ -34,5 +34,5 @@ function dungeonestDark(rooms) {
   return `You've made it!\nCoins: ${coins}\nHealth: ${health}`
 }
 
-// console.log(dungeonestDark('rat 10|bat 20|potion 10|rat 10|chest 100|boss 70|chest 1000'))
-// console.log(dungeonestDark('cat 10|potion 30|orc 10|chest 10|snake 25|chest 110'))
+//console.log(dungeonestDark('rat 10|bat 20|potion 10|rat 10|chest 100|boss 70|chest 1000'))
+//console.log(dungeonestDark('cat 10|potion 30|orc 10|chest 10|snake 25|chest 110'))

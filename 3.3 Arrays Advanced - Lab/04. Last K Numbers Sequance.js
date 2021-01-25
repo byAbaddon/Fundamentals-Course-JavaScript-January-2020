@@ -10,4 +10,4 @@ function lastKNumbersSequence(n, k) {
   return result.join(' ')
 }
 
-// console.log(lastKNumbersSequence(6, 3))
+//console.log(lastKNumbersSequence(6, 3))

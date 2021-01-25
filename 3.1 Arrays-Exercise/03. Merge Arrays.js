@@ -14,4 +14,4 @@ function mergeArrays(array1, array2) {
   return arr3.join(' - ')
 }
 
-// console.log(mergeArrays(['5', '15', '23', '56', '35'], ['17', '22', '87', '36', '11']))
+//console.log(mergeArrays(['5', '15', '23', '56', '35'], ['17', '22', '87', '36', '11']))

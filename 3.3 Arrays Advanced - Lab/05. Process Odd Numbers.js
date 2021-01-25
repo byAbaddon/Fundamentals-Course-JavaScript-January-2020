@@ -7,4 +7,4 @@ function processOddNumbers(arg) {
   return str.reverse().join(' ')
 }
 
-// console.log(processOddNumbers([3, 0, 10, 4, 7, 3]))
+//console.log(processOddNumbers([3, 0, 10, 4, 7, 3]))

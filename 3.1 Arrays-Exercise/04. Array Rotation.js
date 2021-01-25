@@ -8,5 +8,5 @@ function arrayRotation(arr, num) {
   return arr.join(' ')
 }
 
-// console.log(arrayRotation([51, 47, 32, 61, 21], 2))
-// console.log(arrayRotation([2, 4, 15, 31], 5))
+//console.log(arrayRotation([51, 47, 32, 61, 21], 2))
+//console.log(arrayRotation([2, 4, 15, 31], 5))

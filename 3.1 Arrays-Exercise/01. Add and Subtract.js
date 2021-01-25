@@ -14,4 +14,4 @@ function addOrSubtract(inputArray) {
   return `[ ${arr.join(', ')} ]\n${sumOriginalArr}\n${sumModifiedArr}`
 }
 
-// console.log(addOrSubtract([-5, 11, 3, 0, 2]))
+//console.log(addOrSubtract([-5, 11, 3, 0, 2]))

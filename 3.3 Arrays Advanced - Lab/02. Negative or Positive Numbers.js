@@ -4,5 +4,5 @@ function negativeOrPositiveNumbers(arr) {
   return result.join('\n')
 }
 
-// console.log(negativeOrPositiveNumbers([7, -2, 8, 9]))
-// console.log(negativeOrPositiveNumbers([3, -2, 0, -1]))
+//console.log(negativeOrPositiveNumbers([7, -2, 8, 9]))
+//console.log(negativeOrPositiveNumbers([3, -2, 0, -1]))
