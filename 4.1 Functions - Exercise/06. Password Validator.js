@@ -24,5 +24,5 @@ function passwordValidator(pass) {
 // passwordValidator('logIn')
 // passwordValidator('MyPass123')
 // passwordValidator('Pa$s$s')
-// passwordValidator(`Pa12123`);
+// passwordValidator(`Pa12123`)
 

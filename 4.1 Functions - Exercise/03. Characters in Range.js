@@ -16,8 +16,8 @@ function charactersInRange(char1, char2) {
     charCollections.push(String.fromCharCode(i))
   }
 
-  console.log(charCollections.join(' '));
+  return charCollections.join(' ')
 }
 
-// charactersInRange('C', '#')
-// charactersInRange('#', ':')
+// console.log(charactersInRange('C', '#'))
+// console.log(charactersInRange('#', ':'))

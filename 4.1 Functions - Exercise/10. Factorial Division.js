@@ -7,10 +7,10 @@ function factorialDivision(r1, r2) {
      return num * factorial(num - 1)
   }
 
-  let recOneResult =  factorial(r1)
-  let recTwoResult =  factorial(r2)
+  let recOneResult = factorial(r1)
+  let recTwoResult = factorial(r2)
 
-  console.log((recOneResult / recTwoResult ).toFixed(2));
+  return (recOneResult / recTwoResult ).toFixed(2)
 }
 
-//factorialDivision(5, 2)
+// console.log(factorialDivision(5, 2))
