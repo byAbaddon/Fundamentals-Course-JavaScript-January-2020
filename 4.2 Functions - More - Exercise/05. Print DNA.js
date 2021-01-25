@@ -24,4 +24,4 @@ function printDNA(input) {
   }
 }
 
-//printDNA(29)
+// printDNA(29)

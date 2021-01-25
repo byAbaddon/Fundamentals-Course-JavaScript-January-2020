@@ -6,13 +6,12 @@ function numberModification(n) {
     let sumNumbers = num.reduce((a, b) => a + b)
     let average = sumNumbers / lengthList
     if (average > 5) {
-      console.log(num.join(''));
-      return
+      return num.join('')
     }
 
     num.push(9)
   }
 }
 
-//numberModification(101)
-//numberModification(5835) 
+// console.log(numberModification(101))
+// console.log(numberModification(5835))
