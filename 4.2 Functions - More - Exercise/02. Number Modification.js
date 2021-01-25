@@ -13,5 +13,6 @@ function numberModification(n) {
   }
 }
 
+
 // console.log(numberModification(101))
 // console.log(numberModification(5835))
