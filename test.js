@@ -1,6 +1,14 @@
-//test commit form code
-function primeNumberChecker(num) {
-  return[ 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79,].includes(num)
+function sortNumbers(...arr) {
+    return arr.sort((a, b) => b - a).join('\n')
+}   
+
+//console.log(sortNumbers(-2, 1, 3))
+
+//--------------------------------------(2)-------------------
+
+
+function sortNumbers(...arr) {
+  arr.sort((a, b) => b - a).forEach(el => console.log(el))
 }
 
-console.log(primeNumberChecker(7))
+// sortNumbers(-2, 1, 3)
