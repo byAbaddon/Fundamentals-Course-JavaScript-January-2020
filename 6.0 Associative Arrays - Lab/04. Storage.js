@@ -14,9 +14,9 @@ function storage(inputArr) {
   }
 
   map.forEach((value, key) => {
-    console.log(key + " -> " + value);
+    console.log(key + " -> " + value)
 
-  });
+  })
 }
 
 // storage(['tomatoes 10',

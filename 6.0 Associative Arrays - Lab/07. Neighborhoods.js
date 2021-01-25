@@ -18,11 +18,11 @@ function neighborhoods(inputArr) {
   let sorted = Object.entries(obj).sort((a, b) => b[1].length - a[1].length)
 
   for (const el of sorted) {
-    console.log(`${el[0]}: ${el[1].length}`);
+    console.log(`${el[0]}: ${el[1].length}`)
     el[1].forEach(element => {
-      console.log('--' + element);
+      console.log('--' + element)
 
-    });
+    })
 
   }
 }

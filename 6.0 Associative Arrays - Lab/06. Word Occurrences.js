@@ -16,7 +16,7 @@ function wordOccurrences(inputArr) {
   let sortValue = [...map.entries()].sort((a, b) => b[1] - a[1])
 
   for (const key of sortValue) {
-    console.log(key[0] + ' -> ' + key[1] + ' times');
+    console.log(key[0] + ' -> ' + key[1] + ' times')
   }
 
 }
