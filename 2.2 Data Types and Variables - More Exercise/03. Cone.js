@@ -5,4 +5,4 @@ function cone(a, b) {
   return `volume = ${volume.toFixed(4)}\narea = ${area.toFixed(4)}`
 }
 
-// console.log(cone(3, 5))
+//console.log(cone(3, 5))

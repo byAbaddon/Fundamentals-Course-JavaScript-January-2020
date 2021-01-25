@@ -3,4 +3,4 @@ function dayOfWeek(day) {
   return day > 0 && day <= 7 ? dayList[day - 1] : 'Invalid day!'
 }
 
-// console.log(dayOfWeek(0))
+//console.log(dayOfWeek(0))

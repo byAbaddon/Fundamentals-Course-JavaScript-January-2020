@@ -2,4 +2,4 @@ function primeNumberChecker(num) {
   return [ 2, 5, 7, 11, 13, 29, 31, 41, 59, 73].includes(num)
 }
 
-// console.log(primeNumberChecker(7))
+//console.log(primeNumberChecker(7))

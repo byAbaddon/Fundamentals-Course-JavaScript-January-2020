@@ -25,6 +25,6 @@ function digitsWithWords(arg) {
   return result
 }
 
-// console.log(digitsWithWords('two'))
+//console.log(digitsWithWords('two'))
 
 

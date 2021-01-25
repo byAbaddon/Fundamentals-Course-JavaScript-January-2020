@@ -22,4 +22,4 @@ function chessBoard(num) {
   console.log(`</div>`);
 }
 
-//chessBoard(3)
+// chessBoard(3)

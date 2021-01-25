@@ -2,8 +2,8 @@ function sumEvenNumbers(inputArr) {
   return inputArr.reduce((a, b) => b % 2 === 0 ? +a + +b : a, 0)
 }
 
-// console.log(sumEvenNumbers(['1', '2', '3', '4', '5', '6']))
-// console.log(sumEvenNumbers(['3', '5', '7', '9']))
+//console.log(sumEvenNumbers(['1', '2', '3', '4', '5', '6']))
+//console.log(sumEvenNumbers(['3', '5', '7', '9']))
 
 
 

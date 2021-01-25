@@ -2,8 +2,8 @@ function reverseAnArrayOfStrings(inputArray) {
   return inputArray.reverse().join(' ')
 }
 
-// console.log(reverseAnArrayOfStrings(['a', 'b', 'c', 'd', 'e']))
-// console.log(reverseAnArrayOfStrings(['33', '123', '0', 'dd']))
+//console.log(reverseAnArrayOfStrings(['a', 'b', 'c', 'd', 'e']))
+//console.log(reverseAnArrayOfStrings(['33', '123', '0', 'dd']))
 
 
 

@@ -6,4 +6,4 @@ function sumFirstAndLastArrayElements(inputArray) {
   return result                          // function must use return not console.log()!
 }
 
-// console.log(sumFirstAndLastArrayElements(['10', '17', '22', '33']))
+//console.log(sumFirstAndLastArrayElements(['10', '17', '22', '33']))
