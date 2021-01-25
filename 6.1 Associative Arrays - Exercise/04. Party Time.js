@@ -1,5 +1,4 @@
-function partyTime(inputArr) { //todo
-  let arr = [...inputArr]
+function partyTime(arr) {
   let listVIPGuest = []
   let listRegularGuest = []
   let invitedGuests = arr.splice(0, arr.indexOf('PARTY'))
