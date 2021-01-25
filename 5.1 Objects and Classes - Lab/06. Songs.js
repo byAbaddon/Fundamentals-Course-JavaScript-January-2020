@@ -1,5 +1,5 @@
-function songs(inputArr) {
-  let arr = [...inputArr]
+function songs(arr) {
+
   let loop = arr.shift()
   let typeSong = arr.pop()
 
