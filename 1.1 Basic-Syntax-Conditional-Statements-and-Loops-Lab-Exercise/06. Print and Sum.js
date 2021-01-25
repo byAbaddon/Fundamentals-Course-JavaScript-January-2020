@@ -10,6 +10,6 @@ function printAndSum(start, end) {
   return `${strCollection}\nSum: ${sum}`
 }
 
-// console.log(printAndSum(5, 10))
-// console.log(printAndSum(0, 26))
-// console.log(printAndSum(50, 60))
+//console.log(printAndSum(5, 10))
+//console.log(printAndSum(0, 26))
+//console.log(printAndSum(50, 60))

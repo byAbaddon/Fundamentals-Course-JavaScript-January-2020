@@ -26,6 +26,6 @@ function division(num) {
   return `The number is divisible by ${result}`
 }
 
-// console.log(division(30))
-// console.log(division(15))
-// console.log(division(1643))
+//console.log(division(30))
+//console.log(division(15))
+//console.log(division(1643))

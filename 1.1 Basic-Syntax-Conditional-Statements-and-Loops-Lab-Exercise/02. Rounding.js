@@ -6,5 +6,5 @@ function rounding(number, roundNum) {
   return parseFloat(number.toFixed(roundNum))
 }
 
-// console.log(rounding(3.1415926535897932384626433832795, 2))
-// console.log(rounding(10.5 , 3))
+//console.log(rounding(3.1415926535897932384626433832795, 2))
+//console.log(rounding(10.5 , 3))

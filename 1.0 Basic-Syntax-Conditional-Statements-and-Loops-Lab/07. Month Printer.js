@@ -3,4 +3,4 @@ function monthPrinter(n) {
   return n > 12 || n < 0 ? 'Error!' : monthList[n]
 }
 
-// console.log(monthPrinter(-3))
+//console.log(monthPrinter(-3))

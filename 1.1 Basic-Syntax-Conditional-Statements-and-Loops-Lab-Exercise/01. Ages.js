@@ -17,6 +17,6 @@ function ages(age) {
   return result
 }
 
-// console.log(ages(20))
-// console.log(ages(1))
-// console.log(ages(100))
+//console.log(ages(20))
+//console.log(ages(1))
+//console.log(ages(100))

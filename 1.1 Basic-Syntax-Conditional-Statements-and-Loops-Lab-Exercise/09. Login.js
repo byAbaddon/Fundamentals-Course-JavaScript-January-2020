@@ -15,5 +15,5 @@ function login(arg) {
   }
 }
 
-// login(['Acer','login','go','let me in','recA'])
-// login(['sunny','rainy','cloudy','sunny','not sunny'])
+//login(['Acer','login','go','let me in','recA'])
+//login(['sunny','rainy','cloudy','sunny','not sunny'])

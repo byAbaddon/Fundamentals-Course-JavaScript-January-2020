@@ -24,6 +24,6 @@ function bitcoin(arg) {
   console.log(`Left money: ${allMoney.toFixed(2)} lv.`)
 }
 
-// bitcoin([100, 200, 300])
-// bitcoin([50, 100])
-// bitcoin([3124.15, 504.212, 2511.124])
+//bitcoin([100, 200, 300])
+//bitcoin([50, 100])
+//bitcoin([3124.15, 504.212, 2511.124])

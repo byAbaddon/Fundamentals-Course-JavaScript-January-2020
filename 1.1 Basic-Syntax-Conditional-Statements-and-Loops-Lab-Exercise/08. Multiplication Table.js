@@ -5,4 +5,4 @@ function  multiplicationTable(num) {
   }
 }
 
-//multiplicationTable(5)
+// multiplicationTable(5)

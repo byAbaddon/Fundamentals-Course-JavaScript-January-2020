@@ -10,5 +10,5 @@ function foreignLanguages(arg) {
   return result
 }
 
-// console.log(foreignLanguages('Germany'))
-// console.log(foreignLanguages('USA')   )
+//console.log(foreignLanguages('Germany'))
+//console.log(foreignLanguages('USA')   )
