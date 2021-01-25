@@ -1,15 +1,15 @@
 function arrayManipulations(arr) {
-  let listOfNum = arr.shift().split(' ').map(Number)
+  let arrOfNum = arr.shift().split(' ').map(Number)
 
   for (let i = 0; i < arr.length; i++) {
     let [command, num, index] = arr[i].split(' ')
-    if (command == 'Add') listOfNum.push(num)
-    if (command == 'Remove') listOfNum = listOfNum.filter(el => el !== +num)
-    if (command == 'RemoveAt') listOfNum.splice(num, 1)
-    if (command == 'Insert') listOfNum.splice(index, 0, num)
+    if (command == 'Add') arrOfNum.push(num)
+    if (command == 'Remove') arrOfNum = arrOfNum.filter(el => el !== +num)
+    if (command == 'RemoveAt') arrOfNum.splice(num, 1)
+    if (command == 'Insert') arrOfNum.splice(index, 0, num)
   }
 
-  return listOfNum.join(' ')
+  return arrOfNum.join(' ')
 }
 
 

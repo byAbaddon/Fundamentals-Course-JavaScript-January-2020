@@ -1,9 +1,5 @@
-function listOfProducts(inputArr = []) {
-  let arr = [...inputArr]
-  let sortResult = arr.sort()
-  sortResult.forEach((el, i) => {
-    console.log(`${i+1}.${el}`);
-  });
+function listOfProducts(arr) {
+  arr.sort().forEach((el, i) => console.log(`${++i}.${el}`))
 }
 
-//listOfProducts(["Potatoes", "Tomatoes", "Onions", "Apples"])
+// listOfProducts(["Potatoes", "Tomatoes", "Onions", "Apples"])
