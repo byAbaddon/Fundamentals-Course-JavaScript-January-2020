@@ -11,4 +11,4 @@ function addAndSubtract(n1, n2, n3) {
   return subtract(sum(n1, n2), n3)
 }
 
-// console.log(addAndSubtract(1, 17, 30))
+//console.log(addAndSubtract(1, 17, 30))

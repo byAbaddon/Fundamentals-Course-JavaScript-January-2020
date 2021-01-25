@@ -8,4 +8,4 @@ function perfectNumber(num) {
   return num == sumDivisor ? 'We have a perfect number!' : 'It\'s not so perfect.'
 }
 
-// console.log(perfectNumber(28))
+//console.log(perfectNumber(28))

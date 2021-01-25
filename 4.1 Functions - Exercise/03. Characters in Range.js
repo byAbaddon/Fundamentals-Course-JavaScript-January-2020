@@ -19,5 +19,5 @@ function charactersInRange(char1, char2) {
   return charCollections.join(' ')
 }
 
-// console.log(charactersInRange('C', '#'))
-// console.log(charactersInRange('#', ':'))
+//console.log(charactersInRange('C', '#'))
+//console.log(charactersInRange('#', ':'))

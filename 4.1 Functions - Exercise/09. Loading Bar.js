@@ -5,5 +5,5 @@ function loadingBar(num) {
   return num / 100 !== 1 ? `${num}% [${pr}${dot}]\nStill loading...` : `100% Complete!\n[${pr}]`
 }
 
-// console.log(loadingBar(30))
-// console.log(loadingBar(100))
+//console.log(loadingBar(30))
+//console.log(loadingBar(100))

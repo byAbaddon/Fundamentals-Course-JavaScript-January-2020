@@ -8,4 +8,4 @@ function palindromeIntegers(arr) {
   }
 }
 
-// palindromeIntegers([32, 2, 232, 1010])
+//palindromeIntegers([32, 2, 232, 1010])
