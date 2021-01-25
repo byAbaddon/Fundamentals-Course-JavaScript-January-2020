@@ -1,4 +1,4 @@
-function chrystalFabric(array) {                     //copy past
+function chrystalFabric(array) {                     //copy paste
   let neededThickness = array[0]
 
   for (let i = 1; i < array.length; i++) {
