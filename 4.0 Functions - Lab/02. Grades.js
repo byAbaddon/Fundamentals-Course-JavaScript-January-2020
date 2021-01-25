@@ -1,7 +1,7 @@
 function grades(grade) {
   let result = ''
   if (grade <= 2.99) {
-    result = "Fail"
+    return 'Fail (2)'
   } else if (grade > 2.99 && grade <= 3.49) {
     result = "Poor"
   } else if (grade >= 3.50 && grade <= 4.49) {
@@ -12,8 +12,8 @@ function grades(grade) {
     result = "Excellent"
   }
 
-  console.log(result);
+  return `${result} (${grade.toFixed(2)})`
 }
 
-//grades(2.99)
+// console.log(grades(2.99))
 

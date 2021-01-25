@@ -1,5 +1,5 @@
 function mathPower(num, powerNum) {
-  console.log(Math.pow(num, powerNum));
+  return Math.pow(num, powerNum)
 }
 
-//mathPower(2, 8)
+// console.log(mathPower(2, 8))
