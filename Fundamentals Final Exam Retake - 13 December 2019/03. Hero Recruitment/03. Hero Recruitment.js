@@ -47,24 +47,23 @@ function heroRecruitment(inputArr) {
   }
 }
 
-heroRecruitment([
-
-  'Enroll Stefan',
-  'Learn Stefan ItShouldWork',
-  'Learn Stefan ItShouldWork2',
-  'Learn Stefan ItShouldWork22',
-  'Learn Stefan ItShouldWork222',
-  'Learn Stefan ItShouldWork2222',
-  'Unlearn Stefan ItShouldWork',
-  'Enroll Stefan',
-  'Enroll Pesho',
-  'Enroll Stefan',
-  'Learn Stefan ItShouldWork',
-  'Learn Stamat ItShouldNotWork',
-  // 'Unlearn Gosho Dispel',
-  // 'Unlearn Stefan ItShouldWork',
-  'End'
-])
+// heroRecruitment([
+//   'Enroll Stefan',
+//   'Learn Stefan ItShouldWork',
+//   'Learn Stefan ItShouldWork2',
+//   'Learn Stefan ItShouldWork22',
+//   'Learn Stefan ItShouldWork222',
+//   'Learn Stefan ItShouldWork2222',
+//   'Unlearn Stefan ItShouldWork',
+//   'Enroll Stefan',
+//   'Enroll Pesho',
+//   'Enroll Stefan',
+//   'Learn Stefan ItShouldWork',
+//   'Learn Stamat ItShouldNotWork',
+//   // 'Unlearn Gosho Dispel',
+//   // 'Unlearn Stefan ItShouldWork',
+//   'End'
+// ])
 
 
 
