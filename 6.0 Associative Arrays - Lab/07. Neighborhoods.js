@@ -1,12 +1,6 @@
-function neighborhoods(inputArr) {
-  let arr = [...inputArr]
+function neighborhoods(arr) {
   let obj = {}
-  let neighborhoodsName = arr.shift()
-    .split(', ')
-    .forEach(key => {
-      return obj[key] = []
-    });
-
+  arr.shift().split(', ').forEach(key => {return obj[key] = []})
 
   while (arr.length > 0) {
     let [neighborhoods, person] = arr.shift().split(' - ')
@@ -19,11 +13,7 @@ function neighborhoods(inputArr) {
 
   for (const el of sorted) {
     console.log(`${el[0]}: ${el[1].length}`)
-    el[1].forEach(element => {
-      console.log('--' + element)
-
-    })
-
+    el[1].forEach(element => console.log('--' + element))   
   }
 }
 
