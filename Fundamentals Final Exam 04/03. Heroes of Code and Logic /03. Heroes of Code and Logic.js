@@ -15,7 +15,7 @@ function heroesOfCodeAndLogic(arr) {
       let mpNeeded = arg1
       let spellName = arg2
 
-      if (herosObj[name].mp -mpNeeded >= 0) {
+      if (herosObj[name].mp - mpNeeded >= 0) {
         herosObj[name].mp -= mpNeeded
         console.log(`${name} has successfully cast ${spellName} and now has ${herosObj[name].mp} MP!`)
       } else {
