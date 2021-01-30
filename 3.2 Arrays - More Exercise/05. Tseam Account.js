@@ -1,42 +1,38 @@
-function tseamAccount(inputArr) {
-  let arr = [...inputArr]
+function tseamAccount(arr) {
+  arr.pop()
   let gameArr = arr.shift().split(' ')
 
-  for (let i = 0; i < arr.length; i++) {
-    let [command, game] = arr[i].split(' ')
+  while (arr.length > 0) {
+    const [command, game] = arr.shift().split(' ')
 
-    switch (command) {
-      case 'Install':
-        if (!gameArr.includes(game)) {
-          gameArr.push(game)
-        }
-        break;
-      case 'Uninstall':
-        if (gameArr.includes(game)) {
-          gameArr = gameArr.filter(el => el !== game)
-        }
-        break;
-      case 'Update':
-        if (gameArr.includes(game)) {
-          let findIndexGame = gameArr.indexOf(game)
-          gameArr.splice(findIndexGame, 1)
-          gameArr.push(game)
-        }
-        break;
-      case 'Expansion':
-        let getGameFromFirstPart = game.split('-')[0]
-        let getGameFromSecondPart = game.split('-')[1]
-        if (gameArr.includes(getGameFromFirstPart)) {
-          let findIndexGame = gameArr.indexOf(getGameFromFirstPart)
-          gameArr.splice(findIndexGame + 1, 0, getGameFromFirstPart + ':' + getGameFromSecondPart)
-        }
-        break;
-      case 'Play!':
-        console.log(gameArr.join(' '));
-        break;
+    if (command == 'Install' && !gameArr.includes(game)) {
+      gameArr.push(game)
+    }
+
+    if (command == 'Uninstall' && gameArr.includes(game)) {
+      gameArr = gameArr.filter(el => el !== game)
+    }
+
+    if (command == 'Update' && gameArr.includes(game)) {
+      let index = gameArr.indexOf(game)
+      gameArr.splice(index, 1)
+      gameArr.push(game)
+
+    }
+
+    if (command == 'Expansion') {
+      let firstPart = game.split('-')[0]
+      let secondPart = game.split('-')[1]
+      if (gameArr.includes(firstPart)) {
+        let index = gameArr.indexOf(firstPart)
+        gameArr.splice(index + 1, 0, firstPart + ':' + secondPart)
+      }
     }
   }
+
+  return gameArr.join(' ')
 }
 
-// tseamAccount(['CS WoW Diablo', 'Install LoL', 'Uninstall WoW', 'Update Diablo', 'Expansion CS-Go', 'Play!'])
-// tseamAccount(['CS WoW Diablo', 'Uninstall XCOM', 'Update PeshoGame', 'Update WoW', 'Expansion Civ-V', 'Play!'])
+
+// console.log(tseamAccount(['CS WoW Diablo', 'Install LoL', 'Uninstall WoW', 'Update Diablo', 'Expansion CS-Go', 'Play!']))
+// console.log(tseamAccount(['CS WoW Diablo', 'Uninstall XCOM', 'Update PeshoGame', 'Update WoW', 'Expansion Civ-V', 'Play!']))
