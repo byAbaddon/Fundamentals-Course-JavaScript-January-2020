@@ -1,10 +1,5 @@
-function personInfo(...inputArr) {
-  let [firstName, lastName, age] = [...inputArr]
-  let person = {firstName, lastName, age}
-  
-  for (const key in person) {
-    console.log(key + ': ' + person[key]);
-  }
+function personInfo(firstName, lastName, age) {
+  return {firstName, lastName, age}
 }
 
-//personInfo("Peter", "Pan",  "20")  
+// console.log(personInfo("Peter", "Pan",  "20"))

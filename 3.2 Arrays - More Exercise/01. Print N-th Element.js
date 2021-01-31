@@ -1,11 +1,10 @@
-function printNthElement(inputArr) {
-  let arr = [...inputArr]
+function printNthElement(arr) {
   let step = +arr.pop()
   let collection = []
   for (let i = 0; i <= arr.length; i += step) {
     collection.push(arr[i])
   }
-console.log(collection.join(' '));
+  console.log(collection.join(' '))
 }
 
 // printNthElement(['1', '2', '3', '4', '5', '6'])

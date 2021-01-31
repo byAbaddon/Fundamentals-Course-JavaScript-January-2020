@@ -7,12 +7,12 @@ function bombNumbers(arr1, arr2) {
 
   while (targetIndex !== -1) {
 
-    targetArr.splice(targetIndex, bombSpread) //remove bombSpread right element
+    targetArr.splice(targetIndex, bombSpread) 
 
     if (targetIndex - bombSpread < 0) {
-      targetArr.splice(0, bombSpread + 1) //remove bombSpread left element
+      targetArr.splice(0, bombSpread + 1) 
     } else {
-      targetArr.splice(targetIndex - bombSpread, bombSpread + 1) //remove bombSpread left element
+      targetArr.splice(targetIndex - bombSpread, bombSpread + 1)
     }
 
     targetIndex = targetArr.indexOf(bombTarget)
