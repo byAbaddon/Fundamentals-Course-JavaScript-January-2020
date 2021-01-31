@@ -1,18 +1,11 @@
-function addAndRemove(inputArr) {
-  let arr = [...inputArr]
+function addAndRemove(arr) {
   let collection = []
+  for (let i = 0; i < arr.length; i++)
+    arr[i] == 'add' ? collection.push(i + 1) : collection.pop()
 
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] === 'add') {
-      collection.push(i + 1)
-    } else if (arr[i] === 'remove') {
-      collection.pop()
-    }
-  }
-
-  console.log(collection.length === 0 ? 'Empty' : collection.join(' '));
+  return collection.length == 0 ? 'Empty' : collection.join(' ')
 }
 
-// addAndRemove(['add', 'add', 'add', 'add'])
-// addAndRemove(['add', 'add', 'remove', 'add', 'add'])
-// addAndRemove(['remove', 'remove', 'remove'])
+// console.log(addAndRemove(['add', 'add', 'add', 'add']))
+// console.log(addAndRemove(['add', 'add', 'remove', 'add', 'add']))
+// console.log(addAndRemove(['remove', 'remove', 'remove']))
