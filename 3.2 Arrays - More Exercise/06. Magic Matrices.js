@@ -1,8 +1,6 @@
-function magicMatrices(inputArr) {
-  let arr = [...inputArr]
-  // console.log(arr);
-  let sumRow = 0
-  let checkIsEqualSum = 0
+function magicMatrices(arr) {
+  let sumRow = checkIsEqualSum = 0
+
   for (let row = 0; row < arr.length; row++) {
     for (let col = 0; col < arr.length; col++) {
       sumRow += arr[row][col]
