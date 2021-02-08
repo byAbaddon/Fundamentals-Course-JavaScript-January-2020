@@ -1,5 +1,4 @@
-function minerTask(inputArr) {
-  let arr = [...inputArr]
+function minerTask(arr) {
   let objMine = {}
   let [metal, quantity] = ['', 0]
 
@@ -19,4 +18,4 @@ function minerTask(inputArr) {
   }
 }
 
-// minerTask(['gold', '155', 'silver', '10', 'copper', '17', 'gold', '15'])
+minerTask(['gold', '155', 'silver', '10', 'copper', '17', 'gold', '15'])
