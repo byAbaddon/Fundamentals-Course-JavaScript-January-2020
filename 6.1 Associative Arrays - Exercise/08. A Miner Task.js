@@ -1,4 +1,25 @@
 function minerTask(arr) {
+  let mineObj = {}
+
+  for (let i = 0; i < arr.length; i += 2) {
+    let metal = arr[i]
+    let quantity = +arr[i + 1]
+
+    if (!mineObj.hasOwnProperty(metal))
+      mineObj[metal] = quantity
+    else
+      mineObj[metal] += quantity
+  }
+
+  for (const [key, val] of Object.entries(mineObj)) console.log(key + ' -> ' + val)
+}
+
+// minerTask(['gold', '155', 'silver', '10', 'copper', '17', 'gold'
+
+
+//---------------------------------------------------(2)-----------------------------------------
+
+function minerTask(arr) {
   let objMine = {}
   let [metal, quantity] = ['', 0]
 
@@ -18,4 +39,4 @@ function minerTask(arr) {
   }
 }
 
-minerTask(['gold', '155', 'silver', '10', 'copper', '17', 'gold', '15'])
+//minerTask(['gold', '155', 'silver', '10', 'copper', '17', 'gold', '15'])
