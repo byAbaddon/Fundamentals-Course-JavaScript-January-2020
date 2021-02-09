@@ -1,5 +1,18 @@
 function carWash(arr) {
   let value = 0
+  for (const el of arr) el == 'soap' ? value += 10 : el == 'water' ? value *= 1.20 : el == 'vacuum cleaner' ? value *= 1.25 : value *= 0.90
+  return `The car is ${value.toFixed(2)}% clean.`
+}
+
+//console.log(carWash(['soap', 'soap', 'vacuum cleaner', 'mud', 'soap', 'water'])
+
+
+
+
+//---------------------------------------------------(2)-------------------------------------
+
+function carWash(arr) {
+  let value = 0
 
    for (const el of arr) {
      switch (el) {

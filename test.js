@@ -1,34 +1,29 @@
-function songs(arr) {
-  class Song {
-    constructor(type, name, time) {
-      this.type = type
-      this.name = name
-      this.time = time
+function carWash(arr) {
+  let value = 0
+
+  for (const el of arr) {
+    switch (el) {
+      case 'soap':
+        value += 10;
+        break;
+      case 'water':
+        value *= 1.20;
+        break;
+      case 'vacuum cleaner':
+        value *= 1.25;
+        break;
+      case 'mud':
+        value *= 0.90;
+        break;
     }
   }
 
-  let typeOfSong = arr.pop()
-  let songNumber = arr.shift()
-  while (songNumber--) {
-    const [type, name, time] = arr.shift().split('_')
-    let  song = new Song(type, name, time)
-    song.type == typeOfSong || typeOfSong =='all'? console.log(song.name) : null
-  }
+  return `The car is ${value.toFixed(2)}% clean.`
 }
 
-//songs([2, 'like_Replay_3:15', 'ban_Photoshop_3:48', 'all'])
 
-
-//----------------------------------------(2)------------------------------------ HACK
-function songs(arr) {
-  type = arr.pop()
-  for (let i = 1; i < arr.length; i++) {
-    [typeSong, name] = arr[i].split('_')
-    typeSong == type || type == 'all' ? console.log(name) : null
-  }
-}
-
-//songs([3, 'favourite_DownTown_3:14', 'favourite_Kiss_4:16', 'favourite_Smooth Criminal_4:01', 'favourite'])
+console.log(carWash(['soap', 'soap', 'vacuum cleaner', 'mud', 'soap', 'water']))
 
 
 
+)
