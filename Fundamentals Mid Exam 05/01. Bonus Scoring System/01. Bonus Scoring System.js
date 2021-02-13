@@ -1,4 +1,22 @@
 function bonusScoringSystem(arr) {
+  let [studentCount, lectureCount, initialBonus] = arr.splice(0, 3).map(Number)
+  let maxLectures = +arr.sort((a, b) => b - a)[0]
+  let maxBonus = Math.ceil(maxLectures / lectureCount * (5 + initialBonus))
+  studentCount == 0 ? (maxBonus = 0, maxLectures = 0) : null
+  return `Max Bonus: ${maxBonus}.\nThe student has attended ${maxLectures} lectures.`
+}
+
+
+// console.log(
+//   bonusScoringSystem([
+//     '0', '0', '30',
+//     '12', '19', '24',
+//     '16', '20'
+//   ]))
+//----------------------------------------------------(2)---------------------------------------
+
+
+function bonusScoringSystem(arr) {
     let [numberOfStudents, courseLectures, currentBonus] = arr.splice(0, 3).map(Number)
     let gradesObj = {'bonus': 0, 'visited': 0}
   
@@ -20,7 +38,7 @@ function bonusScoringSystem(arr) {
 //       '16', '20'
 //     ]))
 
-//-------------------------------------------------------(2)------------------------
+//-------------------------------------------------------(3)------------------------
 
 function bonusScoringSystem(arr) {
     arr = arr.map(Number)
