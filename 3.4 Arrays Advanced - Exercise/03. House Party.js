@@ -2,22 +2,16 @@ function houseParty(guests) {
   let partyList = new Set()
   for (const token of guests) {
     const [name, , status] = token.split(' ')
-
-    if (!partyList.has(name) && status == 'going!')
-      partyList.add(name)
+    if (!partyList.has(name) && status == 'going!') partyList.add(name)
     else if (!partyList.has(name) && status == 'not') console.log(`${name} is not in the list!`)
-    else {
-      if (partyList.has(name) && status == 'going!') console.log(`${name} is already in the list!`)
-      else
-        partyList.delete(name)
-    }
+    else if (partyList.has(name) && status == 'going!') console.log(`${name} is already in the list!`)
+    else partyList.delete(name)
   }
-
-  for (const el of partyList) console.log(el)
+  return [...partyList].join('\n')
 }
 
 
-//houseParty(['Allie is going!', 'George is going!', 'John is not going!', 'George is not going!'])
+houseParty(['Allie is going!', 'George is going!', 'John is not going!', 'George is not going!'])
 //houseParty(['Tom is going!', 'Annie is going!', 'Tom is going!', 'Garry is going!', 'Jerry is going!'])
 
 
