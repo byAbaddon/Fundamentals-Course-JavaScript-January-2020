@@ -7,7 +7,7 @@ function furniture(arr) {
   arr = arr.splice(0, findIndex).filter(el => pattern.test(el))
 
   for (const el of arr) {
-    let result = String(el).match(pattern)
+    let result = el.match(pattern)
     let items = result.groups.name
     let price = result.groups.price
     let count = result.groups.count

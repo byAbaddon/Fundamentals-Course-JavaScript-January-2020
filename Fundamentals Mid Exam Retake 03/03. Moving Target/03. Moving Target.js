@@ -3,7 +3,7 @@ function movingTarget(arr) {
   let targets = arr.shift().split(' ').map(Number)
 
   while (arr.length > 0) {
-    const [command, index, power] = arr.shift().split(' ').map(el => isNaN(el) ? el : Number(el))
+    const [command, index, power] = arr.shift().split(' ').map(el => Number(el) || el)
 
     if (command === 'Shoot') {
       if (index >= 0 && index < targets.length)
