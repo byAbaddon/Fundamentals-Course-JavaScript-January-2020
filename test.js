@@ -1,12 +1,20 @@
-function hardWords(input) {
-  let arrText = input[0].split(' ').map(el => {
-    if (el.includes('_')) el = input[1].filter(word => word.length == el.length)
-    return el
-  })
+function solve(array) {
+  let lastEl = array.pop()
+  for (let index = 0; index < lastEl; index++) {
+    let element = array.pop()
+    array.unshift(element)
+  }
 
-  return arrText.join(' ')
+  console.log(array.join(' '))
 }
 
-// console.log(hardWords(['Hi, grandma! I\'m so ____ to write to you. ______ the winter vacation, so _______ things happened. My dad bought me a sled. Mom started a new job as a __________. My brother\'s ankle is ________, and now it bothers me even more. Every night Mom cooks ___ on your recipe because it is the most delicious. I hope this year Santa will _____ me a robot.',
-//   ['pie', 'bring', 'glad', 'During', 'amazing', 'pharmacist', 'sprained']
-// ]))
+//solve(['Banana', 'Orange', 'Coconut', 'Apple', '15'])
+
+//-------------------------------(2)------------------------------------
+function rotateArray(arr) {
+  let loop = arr.pop()
+  while (loop--) arr.unshift(arr.pop())
+  return  arr.join(' ')
+}
+
+//console.log(rotateArray(['1', '2', '3', '4', '2']))
