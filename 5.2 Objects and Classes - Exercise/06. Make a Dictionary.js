@@ -1,16 +1,14 @@
-function makeADictionary(inputArr) {
-   let arrCollection = []
+function makeADictionary(input) {
    let obj = {}
 
-   for (let i = 0; i < inputArr.length; i++) {
-      let arrCollection = JSON.parse(inputArr[i])
+   for (let i = 0; i < input.length; i++) {
+      let arrCollection = JSON.parse(input[i])
       let en = Object.entries(arrCollection)[0]
       obj[en[0]] = en[1]
    }
 
-   Object.keys(obj).sort((a, b) => a.localeCompare(b)).forEach(el => {
-      console.log(`Term: ${el} => Definition: ${obj[el]}`);
-   });
+   Object.keys(obj).sort((a, b) => a.localeCompare(b))
+      .forEach(el => console.log(`Term: ${el} => Definition: ${obj[el]}`))
 }
 
 // makeADictionary([
