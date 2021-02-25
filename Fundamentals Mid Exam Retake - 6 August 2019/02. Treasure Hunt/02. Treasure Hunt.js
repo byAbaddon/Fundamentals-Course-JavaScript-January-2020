@@ -4,8 +4,8 @@ function treasureHunt(input) {
 
   while (input.length > 0) {
     const [command, ...n] = input.shift().split(' ')
-    if (command == 'Loot')  for (const el of n)  if (!items.includes(el)) items.unshift(el)    
-    if (command == 'Drop') n[0] >= 0 && n[0] <= items.length ? (takeEl = items.splice(n[0], 1), items.push(takeEl[0])) : null
+    if (command == 'Loot') for (const el of n)  if (!items.includes(el)) items.unshift(el)    
+    if (command == 'Drop') items[n[0]] ? (takeEl = items.splice(n[0], 1), items.push(takeEl[0])) : null
     if (command == 'Steal') console.log(items.splice(-Number(n[0]), ).join(', '))
   }
 
@@ -39,7 +39,7 @@ function treasureHunt(input) {
 
     if (command == 'Drop') {
       let index = +n[0]
-      if (index >= 0 && index <= items.length) {
+      if (items[index]) {
         takeEl = items.splice(index, 1)
         items.push(takeEl[0])
       }
