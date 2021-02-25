@@ -17,4 +17,4 @@ function rotateArray(arr) {
   return  arr.join(' ')
 }
 
-//console.log(rotateArray(['1', '2', '3', '4', '2']))
+console.log(rotateArray(['1', '2', '3', '4', '2']))
