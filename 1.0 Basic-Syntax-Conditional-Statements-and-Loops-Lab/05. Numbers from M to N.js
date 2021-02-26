@@ -3,4 +3,5 @@ function numbersFromMtoN(m, n) {
    console.log(i);
  }
 }
+
 numbersFromMtoN(6, 2)
