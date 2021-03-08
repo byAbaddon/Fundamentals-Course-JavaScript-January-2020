@@ -1,8 +1,8 @@
 function makeADictionary(input) {
    let obj = {}
 
-   for (let i = 0; i < input.length; i++) {
-      let arrCollection = JSON.parse(input[i])
+   for (const row of input) {
+      let arrCollection = JSON.parse(row)
       let en = Object.entries(arrCollection)[0]
       obj[en[0]] = en[1]
    }
