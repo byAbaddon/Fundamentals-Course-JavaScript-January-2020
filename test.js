@@ -1,21 +1,15 @@
-function counterStrike(arr) {
-  let energy = +arr.shift()
-  let countWon = 0
+// Няма нищо кой знае какво сложно в така наречените:
+// Обекти / Речници / Асоциативни масиви
 
-  while (arr.length > 0) {
-    let enemy = +arr.shift()
+// Представете си, че сте треньор на един спортен тим и си подреждате състава;
+ tim = {  1 : 'Гошо - Вратарчето' , 2 : 'Един от ония двамата', 8 : 'Барбуков-опа-Бербатов'}
 
-    if (isNaN(enemy)) break
-    if (energy < enemy) return `Not enough energy! Game ends with ${countWon} won battles and ${energy} energy`
+//  Кой играеше под номер 1 ?
+console.log(tim[1]) // Гошо - Вратарчето
 
-    energy -= enemy
-    countWon++
+// Сменяме Барбуков с Роналдо
+console.log(tim[8] = 'Роналдо') // Роналдо
 
-    if (countWon % 3 == 0) energy += countWon
-  }
+// Червен картон - гонят номер 2
+console.log(delete tim[2])
 
-  return `Won battles: ${countWon}. Energy left: ${energy}`
-}
-
-// console.log(counterStrike(['100', '10', '10', '10', '1', '2', '3', '73', '10']))
-// console.log(counterStrike(['200', '54', '14', '28', '13', 'End of battle']))
