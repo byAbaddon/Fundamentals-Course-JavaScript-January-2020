@@ -3,21 +3,17 @@ function travelTime(arr) {
 
   while (arr.length > 0) {
     let [country, city, price] = arr.shift().split(' > ')
-
-    if (!objTravel.hasOwnProperty(country))
-      objTravel[country] = {}
-
-    if (!objTravel[country].hasOwnProperty(city))
-      objTravel[country][city] = price
-    else
-    if (objTravel[country][city] > price)
-      objTravel[country][city] = price
+    if (!objTravel[country])  objTravel[country] = {}    
+    if (!objTravel[country][city])  objTravel[country][city] = price   
+    else if (objTravel[country][city] > price)  objTravel[country][city] = price             
   }
 
   objTravel = Object.entries(objTravel).sort((a, b) => a[0].localeCompare(b[0]))
 
-  for (const [key, valKey] of objTravel)
-    console.log(key + ' ->', Object.entries(valKey).map(city => city.join(' -> ')).join(' '))
+  for (let [key, valKey] of objTravel) {
+    valKey = Object.entries(valKey).sort((a, b) => a[1] - b[1])
+    console.log(key + ' ->', Object.values(valKey).map(city => city.join(' -> ')).join(' '))
+  }
 }
 
 // travelTime(
