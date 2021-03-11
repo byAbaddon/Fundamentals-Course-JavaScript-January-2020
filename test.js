@@ -1,30 +1,40 @@
-function countStrOcc(str, word) {
-  const re = new RegExp(`\\b${word}\\b`, 'gi')
-  const result = str.match(re)
-  console.log(result ? result.length : 0)
+function winningTicket(arr) {                    
+  arr = arr.shift().split(/\s*,\s*/g)
+
+  for (let line of arr) {
+    if (line.length !== 20) {
+      console.log('invalid ticket')
+      continue
+    }
+
+    let firstHalf = line.substring(0, line.length / 2)
+    let secHalf = line.substring(line.length / 2, line.length)
+    let pattern = /(\@{6,}|\${6,}|\^{6,}|\#{6,})/g
+    let firstMatched = firstHalf.match(pattern)
+    let secMatched = secHalf.match(pattern)
+    if (firstMatched !== null && secMatched !== null) {
+      let combination = 0 
+      if (firstMatched[0].length === secMatched[0].length) {
+        combination = firstMatched[0]
+      } else if (firstMatched[0].length > secMatched[0].length) {
+        combination = secMatched[0]
+      } else {
+        combination = firstMatched[0]
+      }
+
+      if (combination.length >= 6 && combination.length <=9) {
+        console.log(`ticket "${line}" - ${combination.length}${combination[0]}`)
+      } else if (combination.length === 10) {
+        console.log(`ticket "${line}" - ${combination.length}${combination[0]} Jackpot!`)
+      } else {
+        console.log(`ticket "${line}" - no match`)
+      }
+    } else {
+      console.log(`ticket "${line}" - no match`)
+    }
+
+  }
 }
 
-// countStrOcc("This is a word and it also is a sentence", "is")
 
-
-
-
-
-
-
-
-
-// // Няма нищо кой знае какво сложно в така наречените:
-// // Обекти / Речници / Асоциативни масиви
-
-// // Представете си, че сте треньор на един спортен тим и си подреждате състава;
-//  tim = {  1 : 'Гошо - Вратарчето' , 2 : 'Един от ония двамата', 8 : 'Барбуков-опа-Бербатов'}
-
-// //  Кой играеше под номер 1 ?
-// console.log(tim[1]) // Гошо - Вратарчето
-
-// // Сменяме Барбуков с Роналдо
-// console.log(tim[8] = 'Роналдо') // Роналдо
-
-// // Червен картон - гонят номер 2
-// console.log(delete tim[2])
+winningTicket(['Cash$$$$$$Ca$$$$$$sh'])
