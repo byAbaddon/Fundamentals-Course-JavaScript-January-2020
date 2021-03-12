@@ -10,7 +10,7 @@ function comments(inputs) {
             let article = input.split(' ')[1]
             articles.push(article)
         } else if (/^(.+) posts on (.+): (.+), (.+)$/.test(input)) {
-            let [match, user, article, title, content] = input.match(/^(.+) posts on (.+): (.+), (.+)$/);
+            let [match, user, article, title, content] = input.match(/^(.+) posts on (.+): (.+), (.+)$/)
             if (users.includes(user) && articles.includes(article)) {
                 if (!commentsByArticle.hasOwnProperty(article)) {
                     commentsByArticle[article] = []
@@ -19,10 +19,11 @@ function comments(inputs) {
                     user,
                     title,
                     content
-                });
+                })
             }
         }
     }
+
     let sortedCommentsKeys = Object.keys(commentsByArticle).sort((a, b) => commentsByArticle[b].length - commentsByArticle[a].length)
     for (const article of sortedCommentsKeys) {
         console.log(`Comments on ${article}`)

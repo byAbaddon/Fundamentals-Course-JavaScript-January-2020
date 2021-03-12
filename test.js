@@ -1,40 +1,26 @@
-function winningTicket(arr) {                    
-  arr = arr.shift().split(/\s*,\s*/g)
+function partyTime(arr) {
+  let invitedGuests = arr.splice(0, arr.indexOf('PARTY'))
+  let arrivedGuests = arr.splice(1, Infinity)
 
-  for (let line of arr) {
-    if (line.length !== 20) {
-      console.log('invalid ticket')
-      continue
-    }
+  for (let el of arrivedGuests)
+    if (invitedGuests.includes(el))
+      invitedGuests.splice(invitedGuests.indexOf(el), 1)
 
-    let firstHalf = line.substring(0, line.length / 2)
-    let secHalf = line.substring(line.length / 2, line.length)
-    let pattern = /(\@{6,}|\${6,}|\^{6,}|\#{6,})/g
-    let firstMatched = firstHalf.match(pattern)
-    let secMatched = secHalf.match(pattern)
-    if (firstMatched !== null && secMatched !== null) {
-      let combination = 0 
-      if (firstMatched[0].length === secMatched[0].length) {
-        combination = firstMatched[0]
-      } else if (firstMatched[0].length > secMatched[0].length) {
-        combination = secMatched[0]
-      } else {
-        combination = firstMatched[0]
-      }
+  let vipGuest = invitedGuests.filter(el => (/\d/.test(el[0])))
+  let regularGuest = invitedGuests.filter(el => !(/\d/.test(el[0])))
 
-      if (combination.length >= 6 && combination.length <=9) {
-        console.log(`ticket "${line}" - ${combination.length}${combination[0]}`)
-      } else if (combination.length === 10) {
-        console.log(`ticket "${line}" - ${combination.length}${combination[0]} Jackpot!`)
-      } else {
-        console.log(`ticket "${line}" - no match`)
-      }
-    } else {
-      console.log(`ticket "${line}" - no match`)
-    }
-
-  }
+  console.log(vipGuest.length + regularGuest.length)
+  console.log(`${vipGuest.join('\n')}\n${regularGuest.join('\n')}`)
 }
 
-
-winningTicket(['Cash$$$$$$Ca$$$$$$sh'])
+partyTime(
+  ['7IK9Yo0h',
+    '9NoBUajQ',
+    'Ce8vwPmE',
+    'SVQXQCbc',
+    'tSzE5t0p',
+    'PARTY',
+    '9NoBUajQ',
+    'Ce8vwPmE',
+    'SVQXQCbc',
+  ])
