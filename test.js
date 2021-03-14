@@ -1,38 +1,38 @@
-function valueOfString([str, command]) {
-  command == 'LOWERCASE' ?
-    str = str.match(/[a-z]/g).map(el => el.toLowerCase().charCodeAt(0)) :
-    str = str.match(/[A-Z]/g).map(el => el.toUpperCase().charCodeAt(0))
+function winningTicket(arr) {
+  arr = arr.shift().split(/\s*,\s*/g)
 
-  return `The total sum is: ${str.reduce((a, b) => a + b)}`
-}
+  for (let line of arr) {
+    if (line.length !== 20) {
+      console.log('invalid ticket')
+      continue
+    }
 
-// console.log(valueOfString(['HelloFromMyAwesomePROGRAM', 'LOWERCASE']))
-// console.log(valueOfString(['AC/DC', 'UPPERCASE']))
+    let pattern = /(\@{6,}|\${6,}|\^{6,}|\#{6,})/g
+    let firstHalf = line.substring(0, line.length / 2).match(pattern)
+    let secHalf = line.substring(line.length / 2, line.length).match(pattern)
 
-
-function valueOfString([str, arg1]) {
-
-  let result = 0;
-
-  if (arg1 === `UPPERCASE`) {
-    for (const char of str) {
-      let code = char.charCodeAt();
-      if (code >= 65 && code <= 90) {
-        result += Number(code);
+    if (firstHalf !== null && secHalf !== null) {
+      let combination
+      if (firstHalf[0].length === secHalf[0].length) {
+        combination = firstHalf[0]
+      } else if (firstHalf[0].length > secHalf[0].length) {
+        combination = secHalf[0]
+      } else {
+        combination = firstHalf[0]
       }
+
+      if (combination.length >= 6 && combination.length <= 9) {
+        console.log(`ticket "${line}" - ${combination.length}${combination[0]}`)
+      } else if (combination.length === 10) {
+        console.log(`ticket "${line}" - ${combination.length}${combination[0]} Jackpot!`)
+      } else {
+        console.log(`ticket "${line}" - no match`)
+      }
+    } else {
+      console.log(`ticket "${line}" - no match`)
     }
   }
-  if (arg1 === `LOWERCASE`) {
-    for (const char of str) {
-      let code = char.charCodeAt();
-      if (code >= 97 && code <= 122) {
-        result += Number(code);
-      }
-    }
-  }
-  console.log(`The total sum is: ${result}`);
 }
 
 
-// valueOfString(['HelloFromMyAwesomePROGRAM', 'LOWERCASE'])
-// valueOfString(['AC/DC', 'UPPERCASE'])
+// winningTicket(['$$$$$$$$$$$$$$$$$$$$   ,   aabb  ,     th@@@@@@eemo@@@@@@ey'])

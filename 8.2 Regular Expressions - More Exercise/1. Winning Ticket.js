@@ -1,4 +1,4 @@
-function winningTicket(arr) {                    
+function winningTicket(arr) {
   arr = arr.shift().split(/\s*,\s*/g)
 
   for (let line of arr) {
@@ -7,22 +7,21 @@ function winningTicket(arr) {
       continue
     }
 
-    let firstHalf = line.substring(0, line.length / 2)
-    let secHalf = line.substring(line.length / 2, line.length)
     let pattern = /(\@{6,}|\${6,}|\^{6,}|\#{6,})/g
-    let firstMatched = firstHalf.match(pattern)
-    let secMatched = secHalf.match(pattern)
-    if (firstMatched !== null && secMatched !== null) {
-      let combination;
-      if (firstMatched[0].length === secMatched[0].length) {
-        combination = firstMatched[0]
-      } else if (firstMatched[0].length > secMatched[0].length) {
-        combination = secMatched[0]
+    let firstHalf = line.substring(0, line.length / 2).match(pattern)
+    let secHalf = line.substring(line.length / 2, line.length).match(pattern)
+
+    if (firstHalf !== null && secHalf !== null) {
+      let combination
+      if (firstHalf[0].length === secHalf[0].length) {
+        combination = firstHalf[0]
+      } else if (firstHalf[0].length > secHalf[0].length) {
+        combination = secHalf[0]
       } else {
-        combination = firstMatched[0]
+        combination = firstHalf[0]
       }
 
-      if (combination.length >= 6 && combination.length <=9) {
+      if (combination.length >= 6 && combination.length <= 9) {
         console.log(`ticket "${line}" - ${combination.length}${combination[0]}`)
       } else if (combination.length === 10) {
         console.log(`ticket "${line}" - ${combination.length}${combination[0]} Jackpot!`)
@@ -32,9 +31,8 @@ function winningTicket(arr) {
     } else {
       console.log(`ticket "${line}" - no match`)
     }
-
   }
 }
 
 
-// winningTicket(['Cash$$$$$$Ca$$$$$$sh'])
+// winningTicket(['$$$$$$$$$$$$$$$$$$$$   ,   aabb  ,     th@@@@@@eemo@@@@@@ey'])
