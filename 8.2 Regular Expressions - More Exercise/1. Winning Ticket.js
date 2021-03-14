@@ -13,26 +13,23 @@ function winningTicket(arr) {
 
     if (firstHalf !== null && secHalf !== null) {
       let combination
-      if (firstHalf[0].length === secHalf[0].length) {
+      if (firstHalf[0].length === secHalf[0].length)
         combination = firstHalf[0]
-      } else if (firstHalf[0].length > secHalf[0].length) {
+      else if (firstHalf[0].length > secHalf[0].length)
         combination = secHalf[0]
-      } else {
+      else
         combination = firstHalf[0]
-      }
 
-      if (combination.length >= 6 && combination.length <= 9) {
+      if (combination.length >= 6 && combination.length <= 9)
         console.log(`ticket "${line}" - ${combination.length}${combination[0]}`)
-      } else if (combination.length === 10) {
+      else if (combination.length === 10)
         console.log(`ticket "${line}" - ${combination.length}${combination[0]} Jackpot!`)
-      } else {
+      else
         console.log(`ticket "${line}" - no match`)
-      }
-    } else {
+
+    } else
       console.log(`ticket "${line}" - no match`)
-    }
   }
 }
 
-
-// winningTicket(['$$$$$$$$$$$$$$$$$$$$   ,   aabb  ,     th@@@@@@eemo@@@@@@ey'])
+//winningTicket(['$$$$$$$$$$$$$$$$$$$$   ,   aabb  ,     th@@@@@@eemo@@@@@@ey'])
