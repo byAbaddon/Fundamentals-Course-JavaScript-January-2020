@@ -1,4 +1,4 @@
-function mirrorList(text) {
+function mirrorWord(text) {
   const regex = /#{1}[A-z]{3,}\#{2}[A-z]{3,}\#{1}|\@{1}[A-z]{3,}\@{2}[A-z]{3,}\@{1}/gm
   let pairsArr = []
   let resultArr = text[0].match(regex)
@@ -23,6 +23,6 @@ function mirrorList(text) {
     console.log('No mirror words!')
 }
 
-//mirrorList(['@mix#tix3dj#poOl##loOp#wl@@bong&song%4very$long@thong#Part##traP##@@leveL@@Level@##car#rac##tu@pack@@ckap@#rr#sAw##wAs#r#@w1r'])
-//mirrorList(['#po0l##l0op# @bAc##cAB@ @LM@ML@ #xxxXxx##xxxXxx# @aba@@ababa@'])
-//mirrorList(['#lol#lol# @#God@@doG@# #abC@@Cba# @Xyu@#uyX#'])
+//mirrorWord(['@mix#tix3dj#poOl##loOp#wl@@bong&song%4very$long@thong#Part##traP##@@leveL@@Level@##car#rac##tu@pack@@ckap@#rr#sAw##wAs#r#@w1r'])
+// mirrorWord(['#po0l##l0op# @bAc##cAB@ @LM@ML@ #xxxXxx##xxxXxx# @aba@@ababa@'])
+// mirrorWord(['#lol#lol# @#God@@doG@# #abC@@Cba# @Xyu@#uyX#'])
