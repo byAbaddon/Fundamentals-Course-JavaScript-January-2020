@@ -1,45 +1,21 @@
-function santaSecretHelper(arr) {
-  arr.pop()
-  let key = arr.shift()
-  let pattern = /\@(?<name>[A-z]+)[^\@\-\!\:\>]*\!(?<status>[G])\!/g
+function matchDates(input) {
+  let result = input[0].match(/\d{2}([\./-])[A-Z]\w{2}\1\d{4}/gm)
 
-  for (const word of arr) {
-    let decryption = [...word].map(el => String.fromCharCode(el.charCodeAt() - key)).join('')
-    let result = [...decryption.matchAll(pattern)]
-    if (result[0] !== undefined) {
-      if (/^/.test(result[0])) result = String(result[0][1]).match(/^\w+\b/)
-      console.log(result[0])
-    }
+  for (const el of result) {
+    let day = el.slice(0, 2)
+    let month = el.slice(3, 6)
+    let year = el.slice(-4)
+    console.log(`Day: ${day}, Month: ${month}, Year: ${year}`);
   }
 }
 
+// matchDates(["13/Jul/1928, 10-Nov-1934, , 01/Jan-1951,f 25.Dec.1937 23/09/1973, 1/Feb/2016"])
 
-santaSecretHelper([
-  '3',
-  'CNdwhamigyenumje$J$',
-  'CEreelh-nmguuejnW$J$',
-  'CVwdq&gnmjkvng$Q$',
-  'end',
-])
-
-
-function santaSecretHelper(arr) {
-  arr.pop()
-  let key = arr.shift()
-  let pattern = /\@(?<name>[A-z]+)[^\@\-\!\:\>]*\!(?<status>[G])\!/g
-
-  for (const word of arr) {
-    let decryption = [...word].map(el => String.fromCharCode(el.charCodeAt() - key)).join('')
-    let result = [...decryption.matchAll(pattern)]
-    if (result[0] !== undefined)  /^/.test(result[0]) ? console.log( String(result[0][1]).match(/^\w+\b/)[0]) : null    
-  }
+//---------------------------------------------(2)--------------------
+function matchDates(input) {
+  let pattern = input[0].match(/\d{2}([\./-])[A-Z]\w{2}\1\d{4}/gm)
+  for (const el of pattern)
+    console.log(`Day: ${el.slice(0, 2)}, Month: ${el.slice(3, 6)}, Year: ${el.slice(-4)}`)
 }
 
-
-santaSecretHelper([
-  '3',
-  'CNdwhamigyenumje$J$',
-  'CEreelh-nmguuejnW$J$',
-  'CVwdq&gnmjkvng$Q$',
-  'end',
-])
+// matchDates(["13/Jul/1928, 10-Nov-1934, , 01/Jan-1951,f 25.Dec.1937 23/09/1973, 1/Feb/2016"])
