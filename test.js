@@ -21,3 +21,25 @@ santaSecretHelper([
   'CVwdq&gnmjkvng$Q$',
   'end',
 ])
+
+
+function santaSecretHelper(arr) {
+  arr.pop()
+  let key = arr.shift()
+  let pattern = /\@(?<name>[A-z]+)[^\@\-\!\:\>]*\!(?<status>[G])\!/g
+
+  for (const word of arr) {
+    let decryption = [...word].map(el => String.fromCharCode(el.charCodeAt() - key)).join('')
+    let result = [...decryption.matchAll(pattern)]
+    if (result[0] !== undefined)  /^/.test(result[0]) ? console.log( String(result[0][1]).match(/^\w+\b/)[0]) : null    
+  }
+}
+
+
+santaSecretHelper([
+  '3',
+  'CNdwhamigyenumje$J$',
+  'CEreelh-nmguuejnW$J$',
+  'CVwdq&gnmjkvng$Q$',
+  'end',
+])
