@@ -1,21 +1,37 @@
-function matchDates(input) {
-  let result = input[0].match(/\d{2}([\./-])[A-Z]\w{2}\1\d{4}/gm)
+function starEnigma(input) {
+    input.shift()
+    let counter = 0
+    let decrypted = ''
 
-  for (const el of result) {
-    let day = el.slice(0, 2)
-    let month = el.slice(3, 6)
-    let year = el.slice(-4)
-    console.log(`Day: ${day}, Month: ${month}, Year: ${year}`);
-  }
+    let attacked = []
+    let destroyed = []
+    for (let string of input) {
+        for (let symbol of string) /[starSTAR]/.test(symbol) ? counter++ : null
+        for (let symbol of string) {
+            let newSymbol = String.fromCharCode(symbol.charCodeAt(0) - counter)
+            decrypted += newSymbol
+        }
+
+        let pattern = /@(?<planetName>[A-Za-z]+)[^@\-!:>]*:[^@\-!:>]*?[^@\-!:>]*!(?<attackType>[AD])![^@\-!:>]*->/gm
+        let result = pattern.exec(decrypted)
+
+        while (result) {
+            let planetName = result.groups['planetName']
+            let attackType = result.groups['attackType']
+
+            if (attackType === 'A') attacked.push(planetName)
+            else destroyed.push(planetName) //'D'
+            result = pattern.exec(decrypted)
+        }
+
+        counter = 0
+        decrypted = ''
+    }
+
+    console.log(`Attacked planets: ${attacked.length}`)
+    attacked.sort((a, b) => a.localeCompare(b)).forEach(elem => console.log(`-> ${elem}`))
+    console.log(`Destroyed planets: ${destroyed.length}`)
+    destroyed.sort((a, b) => a.localeCompare(b)).forEach(elem => console.log(`-> ${elem}`))
 }
 
-// matchDates(["13/Jul/1928, 10-Nov-1934, , 01/Jan-1951,f 25.Dec.1937 23/09/1973, 1/Feb/2016"])
-
-//---------------------------------------------(2)--------------------
-function matchDates(input) {
-  let pattern = input[0].match(/\d{2}([\./-])[A-Z]\w{2}\1\d{4}/gm)
-  for (const el of pattern)
-    console.log(`Day: ${el.slice(0, 2)}, Month: ${el.slice(3, 6)}, Year: ${el.slice(-4)}`)
-}
-
-// matchDates(["13/Jul/1928, 10-Nov-1934, , 01/Jan-1951,f 25.Dec.1937 23/09/1973, 1/Feb/2016"])
+// starEnigma([2, 'STCDoghudd4=63333$D$0A53333', 'EHfsytsnhf?8555&I&2C9555SR'])

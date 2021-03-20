@@ -32,6 +32,14 @@ function plantDiscovery(arr) {
 }
 
 
+// plantDiscovery([
+//   '2',
+//   'Candelabra<->10',
+//   'Oahu<->10',
+//   'Rate: Oahu - 7',
+//   'Rate: Candelabra - 6',
+//   'Exhibition',
+// ])
 
 
 // plantDiscovery([
@@ -48,11 +56,3 @@ function plantDiscovery(arr) {
 //   'Exhibition',
 // ])
 
-// plantDiscovery([
-//   '2',
-//   'Candelabra<->10',
-//   'Oahu<->10',
-//   'Rate: Oahu - 7',
-//   'Rate: Candelabra - 6',
-//   'Exhibition',
-// ])
