@@ -21,5 +21,5 @@ function furniture(arr) {
   console.log(`Total money spend: ${sum.toFixed(2)}`)
 }
 
-//furniture(['>>TV<<300!5', '>>Sofa<<312.23!3', '>Invalid<<!5', 'Purchase', ])
-//furniture([ '>>TV<<300!5', '>Invalid<<!5', 'Purchase', ])
+// furniture(['>>TV<<300!5', '>>Sofa<<312.23!3', '>Invalid<<!5', 'Purchase', ])
+// furniture([ '>>TV<<300!5', '>Invalid<<!5', 'Purchase', ])
