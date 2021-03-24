@@ -1,5 +1,4 @@
-function garage(inputArr) {
-  let arr = [...inputArr]
+function garage(arr) {
   let garage = new Map()
 
   for (const el of arr) {
@@ -14,13 +13,18 @@ function garage(inputArr) {
     }
   }
 
-
-  for (const [key, val] of garage) {
+  let sortedGarages = [...garage.entries()].sort((a, b) => a[0] - b[0])
+  for (const [key, val] of sortedGarages) {
     console.log('Garage №', key)
-    val.forEach(value => {
-      console.log('---', value.split(':').join(' -'))
-    })
+    val.forEach(value => console.log('---', value.split(':').join(' -')))   
   }
 }
 
-// garage(['1 - color: blue, fuel type: diesel', '1 - color: red, manufacture: Audi', '2 - fuel type: petrol', '4 - color: dark blue, fuel type: diesel, manufacture: Fiat'])
+// garage([
+//   '1 - color: blue, fuel type: diesel',
+//   '1 - color: red, manufacture: Audi',
+//   '2 - fuel type: petrol',
+//   '4 - color: dark blue, fuel type: diesel, manufacture: Fiat'])
+
+
+ 
