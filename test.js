@@ -1,29 +1,24 @@
 function garage(arr) {
-  let garage = {}
+  let garagesObj = {}
 
   for (const el of arr) {
     let [garageNum, carList] = el.split(' - ')
 
-    if (!garage[garageNum]) {
-      garage[carList] = []
-    } else {
-      let moreCars = garageNum
-      moreCars.push(carList)
-      garage[garageNum] = moreCars
+    if (!garagesObj[garageNum]) {
+      garagesObj[garageNum] = []
     }
+    garagesObj[garageNum].push(carList)
   }
 
-  let sortedGarages = [...garage.entries()].sort((a, b) => a[0] - b[0])
-  for (const [key, val] of sortedGarages) {
+  for (const [key, val] of Object.entries(garagesObj)) {
     console.log('Garage №', key)
-    val.forEach(value => console.log('---', value.split(':').join(' -')))   
+    val.forEach(el => console.log('---', el.split(': ').join(' - ')))
   }
 }
 
-garage([
-  '1 - color: blue, fuel type: diesel',
-  '1 - color: red, manufacture: Audi',
-  '2 - fuel type: petrol',
-  '4 - color: dark blue, fuel type: diesel, manufacture: Fiat'])
-
-
+// garage([
+//   '1 - color: blue, fuel type: diesel',
+//   '1 - color: red, manufacture: Audi',
+//   '2 - fuel type: petrol',
+//   '4 - color: dark blue, fuel type: diesel, manufacture: Fiat'
+// ])
