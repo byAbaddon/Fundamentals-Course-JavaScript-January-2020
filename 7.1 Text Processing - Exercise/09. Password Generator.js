@@ -1,24 +1,42 @@
-function passwordGenerator(inputArr) {
-  let text = Array.from(inputArr[0] + inputArr[1])
-  let chars = Array.from(inputArr[2].toUpperCase())
-  let arrCollection = []
+function passwordGenerator(arr) {
+  let chars = [...arr.pop().toUpperCase()]
+  let text = [...arr].join('')
+  let password = []
 
-  for (let i = 0; i < text.length; i++) {
-    if (/[aeiou]/.test(text[i])) {
-      let extractedChar = chars.shift()
-      chars.push(extractedChar)
-
-      let getIndex = text.indexOf(text[i])
-      text[getIndex] = ''
-
-      arrCollection.push(extractedChar)
+  for (let index = 0; index < text.length; index++) {
+    if (/[aeiou]/.exec(text[index])) {
+      password.push(chars[0])
+      chars.push(chars.shift())
+      continue
     }
 
-    arrCollection.push(text[i])
+    password.push(text[index])
   }
 
-  let password = arrCollection.reverse().join('')
-  return `Your generated password is ${password}`
+  return `Your generated password is ${password.reverse().join('')}`
+}
+
+// console.log(passwordGenerator(['areyousureaboutthisone', 'notquitebutitrustyou', 'disturbed']))
+
+
+//---------------------------------------------------------(2)----------------------------
+
+function passwordGenerator(arr) {
+  let text = Array.from(arr[0] + arr[1])
+  let chars = Array.from(arr[2].toUpperCase())
+  let password = []
+
+  for (let index = 0; index < text.length; index++) {
+    if (/[aeiou]/.test(text[index])) {
+      password.push(chars[0])
+      chars.push(chars.shift())
+      continue
+    }
+    
+    password.push(text[index])
+  }
+
+  return `Your generated password is ${password.reverse().join('')}`
 }
 
 // console.log(passwordGenerator(['areyousureaboutthisone', 'notquitebutitrustyou', 'disturbed']))
