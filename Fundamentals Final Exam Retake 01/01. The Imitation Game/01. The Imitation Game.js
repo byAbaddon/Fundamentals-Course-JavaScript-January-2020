@@ -30,8 +30,7 @@ function theImitationGame(arr) {
 
 
 // console.log(theImitationGame(
-//   [
-//     'zzHe',
+//   [ 'zzHe',
 //     'ChangeAll|z|l',
 //     'Insert|2|o',
 //     'Move|3',
