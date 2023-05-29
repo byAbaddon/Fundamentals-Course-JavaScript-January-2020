@@ -3,7 +3,6 @@ function gladiatorExpenses(lostFights, helmetPrice, swordPrice, shieldPrice, arm
   const trashedSwords = ~~(lostFights / 3) * swordPrice
   const trashedShields = ~~(lostFights / 6) * shieldPrice
   const trashedArmors = ~~(lostFights / 12) * armorPrice
-
   const expenses = trashedHelmets + trashedSwords + trashedShields + trashedArmors
 
   return `Gladiator expenses: ${expenses.toFixed(2)} aureus`
