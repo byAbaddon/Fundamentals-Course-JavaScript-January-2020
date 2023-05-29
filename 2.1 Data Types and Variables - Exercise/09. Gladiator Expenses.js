@@ -1,3 +1,21 @@
+function gladiatorExpenses(lostFight, helmetPrice, swordPrice, shieldPrice, armorPrice) {
+  const trashedHelmet = ~~(lostFight / 2)
+  const trashedSword = ~~(lostFight / 3)
+  const trashedShield = ~~(lostFight / 6)
+  const trashedArmor = ~~(lostFight / 12)
+
+  const expenses = (trashedHelmet * helmetPrice) +
+                   (trashedSword * swordPrice) +
+                   (trashedShield * shieldPrice) +
+                   (trashedArmor * armorPrice)
+
+  return `Gladiator expenses: ${expenses.toFixed(2)} aureus`
+}
+
+//console.log(gladiatorExpenses(7, 2, 3, 4, 5))
+
+//-------------------------------------------------------(2)------------------------------------------------
+
 function gladiatorExpenses(lostFight, helmetPrice, swordPrice, shieldPrice, amorPrice) {
   let trashedHelmet = trashedSword = trashedShield = trashedAmor = 0
 
